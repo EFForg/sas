@@ -119,12 +119,15 @@ h2 {
   margin-top: 260px;
 }
 #header-nav {
-  background-color: black;
+  background-color: #007EFF;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 200;
+}
+#header-nav a {
+  color: white; 
 }
 #logo {
   text-align: center;
@@ -168,6 +171,41 @@ ul.menu li {
 #reps-lookup-box h2 {
   font-size: 30px;
 }
+#reps-lookup-box form {
+  padding: 1px 40px;
+}
+#reps-lookup-box form input.text  {
+  text-align: center;
+  background-color: #A3B4C2;
+  border-top: #687F94 3px solid;
+  border-left: #687F94 3px solid;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: 100%;
+}
+#reps-lookup-box form input.submit {
+  background-color: #007EFF;
+  color: white;
+  font-family: 'antonioregular';
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 15px;
+  line-height: 1;
+  border: none;
+  margin-left: 20%;
+  width: 100px;
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+  font-size: 20px;
+}
+#no-zipcode-btn {
+  width: 150px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
 #img-banner {
   max-height: 270px;
   overflow: hidden;
@@ -183,15 +221,15 @@ ul.menu li {
   margin-top: -26%;
 }
 #logo {
-  -moz-transform: translateZ(0.4px) scale(0.6);
-  -ms-transform: translateZ(0.4px) scale(0.6);
-  -webkit-transform: translateZ(0.4px) scale(0.6);
-  transform: translateZ(0.4px) scale(0.6);
+  -moz-transform: translateZ(0.2px) scale(0.8);
+  -ms-transform: translateZ(0.2px) scale(0.8);
+  -webkit-transform: translateZ(0.2px) scale(0.8);
+  transform: translateZ(0.2px) scale(0.8);
   background: url(../images/eye-lg.png) no-repeat;
   display: block;
   position: absolute;
   z-index: 100;
-  top: 100px;
+  top: 56px;
   left: 38%;
 }
 .eye-lg {
@@ -248,11 +286,9 @@ ul.menu li {
 }
 #eye5 {
   top: 49%;
-  left: 59%;
+  left: 61%;
 }
 #eye6 {
   top: 69%;
   left: 69%;
 }
-
-/* Parallax scrolling test */
