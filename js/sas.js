@@ -595,8 +595,36 @@ $(document).ready(function() {
     return reps[repCode][8] + ". " + reps[repCode][9] + " " + reps[repCode][10];
   }
   function sasGetScore(repCode) {
-    return reps[repCode][7];
+    score = reps[repCode][7];
+    var grade = '';
+    
+    if (score == 4) {
+      grade = 'A';
+    }
+    else if (score == 3.5){
+      grade = 'B+';
+    }
+    else if (score == 3){
+      grade = 'B';
+    }
+    else if (score == 2.5){
+      grade = 'C+';
+    }
+    else if (score == 2){
+      grade = 'C';
+    }
+    else if (score == 1.5){
+      grade = 'D+';
+    }
+    else if (score == 1){
+      grade = 'D';
+    }
+    else if (score <= .5){
+      grade = 'F';
+    }
+    return grade;
   }
+
   function sasRenderRep(repCode) {
     return sasGetFullName(repCode) + ": " + sasGetScore(repCode) + '<br/>';
   }
