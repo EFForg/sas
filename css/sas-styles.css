@@ -292,3 +292,26 @@ ul.menu li {
   top: 69%;
   left: 69%;
 }
+
+/* Large devices (large desktops, 960px and up) */
+@media (min-width: 960px) {
+  #img-banner {
+      max-height: 400px;
+  }
+}
+
+/* Mediums size devices and below (991px and below) */
+@media (max-width: 991px) {
+
+}
+
+/* Tablets/medium size devices (between 768px and 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+
+}
+
+/* Responsive tweaks */
+/* Small devices (768px and smaller) */
+@media (max-width: 768px) {
+  
+}
