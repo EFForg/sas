@@ -553,19 +553,20 @@ $(document).ready(function() {
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
     var req = smartyURL + 'street-address?auth-id=' + smartyAuthID + '&auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
-    $.getJSON(req, function(data){
-      if (data[0] != null) {
-        // Get longitude and latitude.
+    
+	  $.ajax({
+      url: 'https://api.smartystreets.com/street-address',
+      dataType: 'JSONP',
+      data: {
+        'auth-token': smartyAuthToken,
+        'street': street,
+        'zipCode': zip,
+        'candidates': 1
+      },
+      success: function (data, status, xhr) {
         var long = data[0]['metadata']['longitude'];
-        var lat = data[0]['metadata']['latitude']
-        // Send off to Sunlight API.
-        if ((long != null) && (lat != null)) {
-          sunlightGetDistricts(long, lat);
-        }
-      }
-      else {
-        // @todo: Explain to user district can't be found.
-        $('body').append('Sorry, your congressional district can\'t be found.<br/>');
+        var lat = data[0]['metadata']['latitude'];
+        sunlightGetDistricts(long, lat);
       }
     });
   }
@@ -573,7 +574,7 @@ $(document).ready(function() {
   // Sunlight API helper functions.
   function sunlightGetDistricts(long, lat) {
     var req = sunlightURL + '/legislators/locate?latitude=' + lat + '&longitude=' + long + '&apikey=' + sunlightKey;
-    var reqData = $.getJSON(req, function(data) {
+    $.getJSON(req, function(data) {
       var results = data['results'];
       for (var i in results) {
         repCode = results[i]['bioguide_id'];
