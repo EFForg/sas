@@ -553,7 +553,7 @@ $(document).ready(function() {
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
     var req = smartyURL + 'street-address?auth-id=' + smartyAuthID + '&auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
-    
+    sasLookupLoading();
 	  $.ajax({
       url: 'https://api.smartystreets.com/street-address',
       dataType: 'JSONP',
@@ -570,6 +570,7 @@ $(document).ready(function() {
           sunlightGetDistricts(long, lat);
         }
         else {
+          $('#reps-list-mine > div.container').html('');
           $('#lookup-error').html("Sorry, we couldn't find any congressional districts for that address. Please check the address and try again.");
         }
       },
@@ -636,11 +637,40 @@ $(document).ready(function() {
     return html;
   }
   
+  function sasLookupLoading() {
+    var html = '<div id="reps-list-load"></div>';
+    $('#reps-list-mine > div.container').html(html);
+    sasSpinner('reps-list-load');
+  }
+  
+  function sasSpinner(div) {
+    var opts = {
+      lines: 13, // The number of lines to draw
+      length: 20, // The length of each line
+      width: 10, // The line thickness
+      radius: 30, // The radius of the inner circle
+      corners: 1, // Corner roundness (0..1)
+      rotate: 0, // The rotation offset
+      direction: 1, // 1: clockwise, -1: counterclockwise
+      color: '#007EFF', // #rgb or #rrggbb or array of colors
+      speed: 1, // Rounds per second
+      trail: 100, // Afterglow percentage
+      shadow: false, // Whether to render a shadow
+      hwaccel: false, // Whether to use hardware acceleration
+      className: 'spinner', // The CSS class to assign to the spinner
+      zIndex: 2e9, // The z-index (defaults to 2000000000)
+      top: '50%', // Top position relative to parent
+      left: '50%' // Left position relative to parent
+    };
+    var target = document.getElementById(div);
+    var spinner = new Spinner(opts).spin(target);
+  }
+  
   // Main
   
   // On Click, lookup address.
   $('#lookup-submit').click(function() {
-    $('#reps-list-mine > div.container').html(' ');
+    $('#reps-list-mine > div.container').html('');
     // @todo Add sanitation.
     // @todo How do we refocus on validation error?
     var street = $('#lookup-street').val();
