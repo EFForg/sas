@@ -578,25 +578,29 @@ $(document).ready(function() {
   
   // Sunlight API helper functions.
   function sunlightGetDistricts(long, lat) {
+    var html;
     var req = sunlightURL + '/legislators/locate?latitude=' + lat + '&longitude=' + long + '&apikey=' + sunlightKey;
     $.getJSON(req, function(data) {
       var results = data['results'];
       for (var i in results) {
         repCode = results[i]['bioguide_id'];
-        // @todo What kind of errors do we need to handle?
-        // @todo Where in the DOM does this go?
-        $('#reps-list-mine > div.container').append(repGetFullName(repCode) + ": " + repGetScore(repCode) + '<br/>');
+        html += sasRenderRep(repCode);
       }
+      $('#reps-list-mine > div.container').html(html);
     });
   }
   
-  // Functions to help w/ Data Display
-  function repGetFullName(code) {
+  // FSAS Functions
+  function sasGetFullName(code) {
     return reps[code][9] + " " + reps[code][10];
   }
-  function repGetScore(code) {
+  function sasGetScore(code) {
     return reps[code][7];
   }
+  function sasRenderRep(code) {
+    return sasGetFullName(repCode) + ": " + sasGetScore(repCode) + '<br/>';
+  }
+  
   
   // Main
   
