@@ -565,7 +565,7 @@ $(document).ready(function() {
       }
       else {
         // @todo: Explain to user district can't be found.
-        $('body').append('Sorry, your congressional district can\'t be found.');
+        $('body').append('Sorry, your congressional district can\'t be found.<br/>');
       }
     });
   }
@@ -592,7 +592,14 @@ $(document).ready(function() {
     return reps[code][7];
   }
   
-  // Example Rep Query:
-  // @todo: Remove
-  smartyGetGeo('1601 Taraval St', '94116');
+  // Main
+  
+  // On Click, lookup address.
+  $('#lookup-submit').click(function() {
+    // @todo Validation and sanitation.
+    // @todo How do we refocus on validation error?
+    var street = $('#lookup-street').val();
+    var zip = $('#lookup-zip').val();
+    smartyGetGeo(street, zip);
+  });
 });
