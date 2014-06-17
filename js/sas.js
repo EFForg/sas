@@ -591,7 +591,7 @@ $(document).ready(function() {
     });
   }
   
-  // FSAS Functions
+  // SAS Functions
   function sasGetFullName(repCode) {
     return reps[repCode][8] + ". " + reps[repCode][9] + " " + reps[repCode][10];
   }
@@ -629,10 +629,17 @@ $(document).ready(function() {
   function sasRenderRep(repCode) {
     return sasGetFullName(repCode) + ": " + sasGetScore(repCode) + '<br/>';
   }
+  
   function sasDisplayAllReps() {
     var html = '';
     for (var i in reps) {
-      html += sasRenderRep(i);
+      html += '<tr>';
+      html +=   '<td>' + sasGetFullName(i) + '</td>';
+      html +=   '<td>' + sasGetScore(i) + '</td>';
+      html +=   '<td>' + reps[i][11] + '</td>';
+      html +=   '<td>' + reps[i][12] + '</td>';
+      html +=   '<td>' + reps[i][15] + '</td>';
+      html += '</tr>';
     }
     return html;
   }
@@ -683,4 +690,10 @@ $(document).ready(function() {
       $('#lookup-error').html('Please enter a street address and zip code.')
     }
   });
+  
+  // For Reps Page
+  // @todo Find best way to break out.
+  // @todo Can this be less slugging? ~540 records. :(
+  $('#reps-all-body').html(sasDisplayAllReps());
+  $("#reps-all-table").tablesorter();
 });
