@@ -107,6 +107,7 @@ h2 {
   margin: auto;
   position: relative;
   height: 360px;
+  overflow: visible;
 }
 #header-title {
   color: #000;
@@ -123,6 +124,7 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 200;
 }
 #logo {
   text-align: center;
@@ -190,7 +192,7 @@ ul.menu li {
   display: block;
   position: absolute;
   z-index: 100;
-  top: 100px;
+  top: 110px;
   left: 40%;
 }
 .eye-lg {
@@ -242,7 +244,7 @@ ul.menu li {
   top: 68%;
 }
 #eye4 {
-  left: 56%;
+  left: 57%;
   top: 68%;
 }
 #eye5 {
