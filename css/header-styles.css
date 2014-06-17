@@ -150,6 +150,7 @@ ul.menu li {
 #reps-list-mine {
   background-color: black;
   color: white;
+  padding-bottom: 10px;
 }
 #reps-lookup-box {
   background-color: white;
@@ -186,14 +187,12 @@ ul.menu li {
   -ms-transform: translateZ(0.4px) scale(0.6);
   -webkit-transform: translateZ(0.4px) scale(0.6);
   transform: translateZ(0.4px) scale(0.6);
-  width: 200px;
-  height: 110px;
   background: url(../images/eye-lg.png) no-repeat;
   display: block;
   position: absolute;
   z-index: 100;
-  top: 110px;
-  left: 40%;
+  top: 100px;
+  left: 38%;
 }
 .eye-lg {
   -moz-transform: translateZ(0.3px) scale(0.7);
