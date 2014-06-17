@@ -564,10 +564,15 @@ $(document).ready(function() {
         'candidates': 1
       },
       success: function (data, status, xhr) {
-        var long = data[0]['metadata']['longitude'];
-        var lat = data[0]['metadata']['latitude'];
-        sunlightGetDistricts(long, lat);
-      }
+        if (data[0] !=  null) {
+          var long = data[0]['metadata']['longitude'];
+          var lat = data[0]['metadata']['latitude'];
+          sunlightGetDistricts(long, lat);
+        }
+        else {
+          $('body').append('Sorry, no data for district.');
+        }
+      },
     });
   }
   
@@ -580,7 +585,7 @@ $(document).ready(function() {
         repCode = results[i]['bioguide_id'];
         // @todo What kind of errors do we need to handle?
         // @todo Where in the DOM does this go?
-        $('body').append(repGetFullName(repCode) + ": " + repGetScore(repCode) + '<br/>');
+        $('#reps-list-mine > div.container').append(repGetFullName(repCode) + ": " + repGetScore(repCode) + '<br/>');
       }
     });
   }
@@ -597,10 +602,16 @@ $(document).ready(function() {
   
   // On Click, lookup address.
   $('#lookup-submit').click(function() {
-    // @todo Validation and sanitation.
+    // @todo Add sanitation.
     // @todo How do we refocus on validation error?
     var street = $('#lookup-street').val();
     var zip = $('#lookup-zip').val();
-    smartyGetGeo(street, zip);
+    if ((street.trim() != '') && (zip.trim() != '')) {
+      $('#lookup-error').html('')
+      smartyGetGeo(street, zip);
+    }
+    else {
+      $('#lookup-error').html('Please enter a street address and zip code.')
+    }
   });
 });
