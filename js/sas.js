@@ -570,7 +570,7 @@ $(document).ready(function() {
           sunlightGetDistricts(long, lat);
         }
         else {
-          $('body').append('Sorry, no data for district.');
+          $('#reps-list-mine > div.container').html("Sorry, we couldn't find any congressional districts for that address. Please check the address and try again.");
         }
       },
     });
@@ -578,7 +578,7 @@ $(document).ready(function() {
   
   // Sunlight API helper functions.
   function sunlightGetDistricts(long, lat) {
-    var html;
+    var html = '';
     var req = sunlightURL + '/legislators/locate?latitude=' + lat + '&longitude=' + long + '&apikey=' + sunlightKey;
     $.getJSON(req, function(data) {
       var results = data['results'];
@@ -591,21 +591,31 @@ $(document).ready(function() {
   }
   
   // FSAS Functions
-  function sasGetFullName(code) {
-    return reps[code][9] + " " + reps[code][10];
+  function sasGetFullName(repCode) {
+    return reps[repCode][8] + ". " + reps[repCode][9] + " " + reps[repCode][10];
   }
-  function sasGetScore(code) {
-    return reps[code][7];
+  function sasGetScore(repCode) {
+    return reps[repCode][7];
   }
-  function sasRenderRep(code) {
+  function sasRenderRep(repCode) {
     return sasGetFullName(repCode) + ": " + sasGetScore(repCode) + '<br/>';
   }
-  
+  function sasDisplayAllReps() {
+    var html = '';
+    for (var i in reps) {
+      html += sasRenderRep(i);
+    }
+    return html;
+  }
   
   // Main
   
+  // Render All Reps
+  $('#reps-list-all').html(sasDisplayAllReps());
+  
   // On Click, lookup address.
   $('#lookup-submit').click(function() {
+    $('#reps-list-mine > div.container').html(' ');
     // @todo Add sanitation.
     // @todo How do we refocus on validation error?
     var street = $('#lookup-street').val();
