@@ -63,6 +63,28 @@
   font-weight: normal;
   font-style: normal;
 }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  -moz-perspective: 1px;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+body, body * {
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
 
 body {
   font-family: 'open_sansregular', 'Helvetica', Arial, sans-serif;
@@ -70,8 +92,21 @@ body {
 a, a:link {
   color: #007EFF;
 }
+h2 {
+  font-family: 'antoniobold';
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.blue-text {
+  color: #007EFF;
+}
 #header {
   background-color: #007EFF;
+  padding: 1px;
+  margin: auto;
+  position: relative;
+  height: 360px;
 }
 #header-title {
   color: #000;
@@ -80,6 +115,7 @@ a, a:link {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: -20px;
+  margin-top: 260px;
 }
 #header-nav {
   background-color: black;
@@ -99,6 +135,8 @@ a, a:link {
 ul.menu {
   text-align: center;
   padding-top: 10px;
+  font-size: 120%;
+  font-weight: bold;
 }
 ul.menu li {
   display: inline;
@@ -110,6 +148,22 @@ ul.menu li {
 #reps-list-mine {
   background-color: black;
   color: white;
+}
+#reps-lookup-box {
+  background-color: white;
+  color: black;
+  padding: 1px 20px;
+  width: 410px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  top: -10px;
+  -webkit-box-shadow: 1px 1px 25px 5px #050505;
+  box-shadow: 1px 1px 25px 5px #050505;
+  font-size: 18px;
+}
+#reps-lookup-box h2 {
+  font-size: 30px;
 }
 #img-banner {
   max-height: 270px;
@@ -125,3 +179,79 @@ ul.menu li {
   width: 100%;
   margin-top: -26%;
 }
+#logo {
+  -moz-transform: translateZ(0.4px) scale(0.6);
+  -ms-transform: translateZ(0.4px) scale(0.6);
+  -webkit-transform: translateZ(0.4px) scale(0.6);
+  transform: translateZ(0.4px) scale(0.6);
+  width: 200px;
+  height: 110px;
+  background: url(../images/eye-lg.png) no-repeat;
+  display: block;
+  position: absolute;
+  z-index: 100;
+  top: 100px;
+  left: 40%;
+}
+.eye-lg {
+  -moz-transform: translateZ(0.3px) scale(0.7);
+  -ms-transform: translateZ(0.3px) scale(0.7);
+  -webkit-transform: translateZ(0.3px) scale(0.7);
+  transform: translateZ(0.3px) scale(0.7);
+  width: 98px;
+  height: 110px;
+  background: url(../images/eye-lg.png) no-repeat;
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+.eye-md {
+  -moz-transform: translateZ(0.2px) scale(0.7);
+  -ms-transform: translateZ(0.3px) scale(0.7);
+  -webkit-transform: translateZ(0.3px) scale(0.7);
+  transform: translateZ(0.3px) scale(0.7);
+  width: 62px;
+  height: 74px;
+  background: url(../images/eye-md.png) no-repeat;
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+.eye-sm {
+  -moz-transform: translateZ(0.1px) scale(0.9);
+  -ms-transform: translateZ(0.1px) scale(0.9);
+  -webkit-transform: translateZ(0.1px) scale(0.9);
+  transform: translateZ(0.1px) scale(0.9);
+  width: 31px;
+  height: 38px;
+  background: url(../images/eye-sm.png) no-repeat;
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+#eye1 {
+  left: 29%;
+  top: 61%;
+}
+#eye2 {
+  left: 35%;
+  top: 51%;
+}
+#eye3 {
+  left: 33%;
+  top: 68%;
+}
+#eye4 {
+  left: 56%;
+  top: 68%;
+}
+#eye5 {
+  top: 49%;
+  left: 59%;
+}
+#eye6 {
+  top: 69%;
+  left: 69%;
+}
+
+/* Parallax scrolling test */
