@@ -638,9 +638,6 @@ $(document).ready(function() {
   
   // Main
   
-  // Render All Reps
-  $('#reps-list-all').html(sasDisplayAllReps());
-  
   // On Click, lookup address.
   $('#lookup-submit').click(function() {
     $('#reps-list-mine > div.container').html(' ');
