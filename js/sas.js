@@ -642,7 +642,7 @@ $(document).ready(function() {
     var html = '<div class="rep-individual col-md-4 col-lg-4">';
     html += '<div class="row">';
     // @todo: Where are images coming from?
-    html += '<img src="images/sen-barbera-boxer.png">';
+    html += '<img src="images/congress/' + repCode + '.jpg">';
     html += '<span class="grade">' + sasGetScore(repCode) + '</span>';
     html += '</div>';
     html += '<div class="row">';
