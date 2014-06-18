@@ -671,7 +671,7 @@
       html +=   '<td>' + sasGetScore(i) + '</td>';
       html +=   '<td>' + reps[i][11] + '</td>';
       html +=   '<td>' + reps[i][12] + '</td>';
-      html +=   '<td>' + reps[i][15] + '</td>';
+      html +=   '<td>' + sasTwitterRender(i) + '</td>';
       html += '</tr>';
     }
     return html;
