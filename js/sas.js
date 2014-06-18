@@ -553,7 +553,6 @@ $(document).ready(function() {
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
     var req = smartyURL + 'street-address?auth-id=' + smartyAuthID + '&auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
-    sasLookupLoading();
 	  $.ajax({
       url: 'https://api.smartystreets.com/street-address',
       dataType: 'JSONP',
@@ -570,7 +569,6 @@ $(document).ready(function() {
           sunlightGetDistricts(long, lat);
         }
         else {
-          $('#reps-list-mine > div.container').html('');
           $('#lookup-error').html("Sorry, we couldn't find any congressional districts for that address. Please check the address and try again.");
         }
       },
@@ -588,7 +586,7 @@ $(document).ready(function() {
         html += sasRenderRep(repCode, results[i]);
       }
       // Write scorecards, hide lookup, show scorecard.
-      $('#reps-list-mine > div.container').html(html);
+      $('#reps-list-mine-scorecards').html(html);
       $('#reps-lookup').toggle();
       $('#reps-list-mine').toggle();
     });
@@ -596,7 +594,7 @@ $(document).ready(function() {
   
   // SAS Functions
   function sasGetFullName(repCode) {
-    return reps[repCode][8] + ". " + reps[repCode][9] + " " + reps[repCode][10];
+    return reps[repCode][8] + ". " + reps[repCode][9] + " " + reps[repCode][10] + '(' + reps[repCode][11]+ '-' + reps[repCode][12] + ')';
   }
   function sasGetScore(repCode) {
     score = reps[repCode][7];
@@ -630,7 +628,21 @@ $(document).ready(function() {
   }
 
   function sasRenderRep(repCode, sunlightResults) {
-    return sasGetFullName(repCode) + ": " + sasGetScore(repCode) + '<br/>';
+    
+    var html = '<div class="rep-individual col-md-4 col-lg-4">';
+    html += '<div class="row">';
+    // @todo: Where are images coming from?
+    html += '<img src="images/sen-barbera-boxer.png">';
+    html += '<span class="grade">' + sasGetScore(repCode) + '</span>';
+    html += '</div>';
+    html += '<div class="row">';
+    html += '<h3>' + sasGetFullName(repCode) + '</h3>';
+    // @todo: Add actual tweet link.  Make twitter render func.
+    html += '<a class="tweat-scorecard" href="#">Tweet @' + repCode[14] + '</a>';
+    html += '</div>';
+    html += '</div>';
+    
+    return html;
   }
   
   function sasDisplayAllReps() {
@@ -645,12 +657,6 @@ $(document).ready(function() {
       html += '</tr>';
     }
     return html;
-  }
-  
-  function sasLookupLoading() {
-    var html = '<div id="reps-list-load"></div>';
-    $('#reps-list-mine > div.container').html(html);
-    sasSpinner('reps-list-load');
   }
   
   function sasSpinner(div) {
@@ -680,18 +686,21 @@ $(document).ready(function() {
   
   // On Click, lookup address.
   $('#lookup-submit').click(function() {
-    $('#reps-list-mine > div.container').html('');
-    // @todo Add sanitation.
-    // @todo How do we refocus on validation error?
     var street = $('#lookup-street').val();
     var zip = $('#lookup-zip').val();
     if ((street.trim() != '') && (zip.trim() != '')) {
-      $('#lookup-error').html('')
+      $('#lookup-error').html('');
       smartyGetGeo(street, zip);
     }
     else {
       $('#lookup-error').html('Please enter a street address and zip code.')
     }
+  });
+  
+  $('#new-search-link').click(function() {
+    $('#reps-list-mine').toggle();
+    $('#reps-list-mine-scorecards').html('');
+    $('#reps-lookup').toggle();
   });
   
   // For Reps Page
