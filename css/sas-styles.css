@@ -154,6 +154,11 @@ ul.menu li {
   color: white;
   padding-bottom: 10px;
 }
+
+#reps-list-mine {
+  display: none;
+}
+
 #reps-lookup-box {
   background-color: white;
   color: black;
