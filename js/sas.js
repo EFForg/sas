@@ -692,8 +692,5 @@ $(document).ready(function() {
   });
   
   // For Reps Page
-  // @todo Find best way to break out.
-  // @todo Can this be less slugging? ~540 records. :(
-  $('#reps-all-body').html(sasDisplayAllReps());
   $("#reps-all-table").tablesorter();
 });
