@@ -1,5 +1,11 @@
 $(document).ready(function() {
-  // For Reps Page
-  // @todo: Need to show this only for reps-list page.
-  $("#reps-all-table").tablesorter();
+  // Add tablesorter and properties.
+  $('#reps-all-table').tablesorter({
+    sortList: [[1,1]],
+    headers: {
+      4: {
+         sorter: false,
+      }
+    }
+  });
 });
