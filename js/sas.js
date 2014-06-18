@@ -585,9 +585,12 @@ $(document).ready(function() {
       var results = data['results'];
       for (var i in results) {
         repCode = results[i]['bioguide_id'];
-        html += sasRenderRep(repCode);
+        html += sasRenderRep(repCode, results[i]);
       }
+      // Write scorecards, hide lookup, show scorecard.
       $('#reps-list-mine > div.container').html(html);
+      $('#reps-lookup').toggle();
+      $('#reps-list-mine').toggle();
     });
   }
   
@@ -626,7 +629,7 @@ $(document).ready(function() {
     return grade;
   }
 
-  function sasRenderRep(repCode) {
+  function sasRenderRep(repCode, sunlightResults) {
     return sasGetFullName(repCode) + ": " + sasGetScore(repCode) + '<br/>';
   }
   
@@ -692,5 +695,6 @@ $(document).ready(function() {
   });
   
   // For Reps Page
-  $("#reps-all-table").tablesorter();
+  // @todo: Need to show this only for reps-list page.
+  //$("#reps-all-table").tablesorter();
 });
