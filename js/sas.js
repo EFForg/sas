@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
   var reps = {
     "L000174":[0,0,4,0,"0","0","0",4,"Sen","Patrick","Leahy","D","VT",null,"SenatorLeahy","SenatorPatrickLeahy","178569152181267"  ],
     "M000485":[0,0,0,0,"0","0","0",0,"Rep","Mike","McIntyre","D","NC",7,"RepMikeMcIntyre","RepMikeMcIntyre","340903514856"  ],
@@ -701,29 +699,3 @@ $(document).ready(function() {
     var target = document.getElementById(div);
     var spinner = new Spinner(opts).spin(target);
   }
-  
-  // Main
-  
-  // On Click, lookup address.
-  $('#lookup-submit').click(function() {
-    var street = $('#lookup-street').val();
-    var zip = $('#lookup-zip').val();
-    if ((street.trim() != '') && (zip.trim() != '')) {
-      $('#lookup-error').html('');
-      smartyGetGeo(street, zip);
-    }
-    else {
-      $('#lookup-error').html('Please enter a street address and zip code.')
-    }
-  });
-  
-  $('#new-search-link').click(function() {
-    $('#reps-list-mine').toggle();
-    $('#reps-list-mine-scorecards').html('');
-    $('#reps-lookup').toggle();
-  });
-  
-  // For Reps Page
-  // @todo: Need to show this only for reps-list page.
-  //$("#reps-all-table").tablesorter();
-});
