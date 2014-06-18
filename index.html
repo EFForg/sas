@@ -42,7 +42,7 @@
         <div id="reps-lookup-box">
           <h2><span class="blue-text">Where do</span> your representatives <span class="blue-text">stand on illegal mass spying?</span></h2>
           <p>Entery your zip code to see how your reps did, or sign our <a href="#letter-signup">Open Letter.</a>
-          <form action="#">
+          <form id='reps-lookup-form' action="#">
             <div class="clearfix">
               <div id="lookup-error"></div>
             </div>
@@ -53,7 +53,7 @@
               <input id="lookup-zip" class="text" type="text" placeholder="Enter Zip Code" />
             </div>
             <div class="clearfix">
-              <input id="lookup-submit" class="submit" type="submit" value="Lookup" /> <a id="no-zipcode-btn" href="#">No zip code?</a>
+              <input id="lookup-submit" class="submit" type="submit" value="Lookup" /> <a id="no-zipcode-btn" href="#letter-signup">No zip code?</a>
             </div>
           </form>
         </div>
@@ -62,42 +62,11 @@
 
     <section id="reps-list-mine">
       <div class="container">
-      <!-- Reps-Mine go here -->
-      
         <div id="reps-list-mine-scorecards" class="row">
-          <div id="rep-first" class="rep-individual col-md-4 col-lg-4">
-            <div class="row">
-              <img src="images/sen-barbera-boxer.png">
-              <span class="grade">C +</span>
-            </div>
-            <div class="row">
-              <h3>Sen. Barbara Boxer (D-CA)</h3>
-              <a class="tweat-scorecard" href="#">Tweet @BarbaraBoxer</a>
-            </div>
-          </div>
-          <div id="rep-second" class="rep-individual col-md-4 col-lg-4">
-            <div class="row">
-              <img src="images/sen-dianne-fienstein.png">
-              <span class="grade">C +</span>
-            </div>
-            <div class="row">
-              <h3>Sen. Dianne Fienstein (D-CA)</h3>
-              <a class="tweat-scorecard" href="#">Tweet @DianneFiendstein</a>
-            </div>
-          </div>
-          <div id="rep-third" class="rep-individual col-md-4 col-lg-4">
-            <div class="row">
-              <img src="images/rep-barbara-lee.png">
-              <span class="grade">C +</span>
-            </div>
-            <div class="row">
-              <h3>Rep. Barbara Lee (D-CA)</h3>
-              <a class="tweat-scorecard" href="#">Tweet @BarbaraLee</a>
-            </div>
-         </div>
+          <!-- Reps-Mine go here -->
         </div>
         <div id="reps-list-mine-footer" class="row">
-          <a id="full-scorecard-link" href="#">Full congressional scorecard</a> <a id="new-search-link" href="#">New zip code search</a>
+          <a id="full-scorecard-link" href="rep-list.html">Full congressional scorecard</a> <a id="new-search-link" href="#">New zip code search</a>
         </div>
       </div>
     </section>
