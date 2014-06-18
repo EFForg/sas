@@ -112,11 +112,10 @@ h2 {
 #header-title {
   color: #000;
   font-family: 'antoniobold';
-  font-size: 110px;
+  font-size: 120px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: -20px;
-  margin-top: 260px;
+  margin-top: 250px;
 }
 #header-nav {
   background-color: #007EFF;
@@ -293,6 +292,9 @@ ul.menu li {
   left: 69%;
 }
 
+.rep-individual {
+  padding: 30px;
+}
 /* Large devices (large desktops, 960px and up) */
 @media (min-width: 960px) {
   #img-banner {
