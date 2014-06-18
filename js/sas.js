@@ -550,6 +550,9 @@
   
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
+    $('#lookup-controls').toggle();
+    $('#reps-lookup-loader').toggle();
+    sasSpinner('reps-lookup-loader');
     var req = smartyURL + 'street-address?auth-id=' + smartyAuthID + '&auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
 	  $.ajax({
       url: 'https://api.smartystreets.com/street-address',
@@ -568,6 +571,8 @@
         }
         else {
           $('#lookup-error').html("Sorry, we couldn't find any congressional districts for that address. Please check the address and try again.");
+          $('#lookup-controls').toggle();
+          $('#reps-lookup-loader').toggle();
         }
       },
     });
@@ -584,9 +589,12 @@
         html += sasRenderRep(repCode, results[i]);
       }
       // Write scorecards, hide lookup, show scorecard.
+      $('#lookup-controls').toggle();
+      $('#reps-lookup-loader').toggle();
       $('#reps-list-mine-scorecards').html(html);
       $('#reps-lookup').toggle();
       $('#reps-list-mine').toggle();
+      
     });
   }
   
@@ -679,10 +687,10 @@
   
   function sasSpinner(div) {
     var opts = {
-      lines: 13, // The number of lines to draw
-      length: 20, // The length of each line
+      lines: 9, // The number of lines to draw
+      length: 10, // The length of each line
       width: 10, // The line thickness
-      radius: 30, // The radius of the inner circle
+      radius: 15, // The radius of the inner circle
       corners: 1, // Corner roundness (0..1)
       rotate: 0, // The rotation offset
       direction: 1, // 1: clockwise, -1: counterclockwise

@@ -211,6 +211,12 @@ ul.menu li {
   display: block;
   font-size: 20px;
 }
+
+#reps-lookup-loader {
+  height: 77px;
+  display: none;  
+}
+
 #no-zipcode-btn {
   width: 150px;
   text-align: center;
