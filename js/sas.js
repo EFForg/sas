@@ -27,7 +27,7 @@ $(document).ready(function() {
     "M001191":[0,0,0,0,"0","0","0",0,"Rep","Patrick","Murphy","D","FL",18,"RepMurphyFL","RepPatrickMurphyFL","317735028342371"  ],
     "M001190":[0,0,0,0,"0","0","0",0,"Rep","Markwayne","Mullin","R","OK",2,"RepMullin","","453637624684399"  ],
     "B001271":[0,0,0,0,"0","0","0",0,"Rep","Dan","Benishek","R","MI",1,"CongressmanDan","","124163654317596"  ],
-    "R000409":[0,0,0,0,"0","0","0",0,"Rep","Dana","Rohrabacher","R","CA",48,"","","78476240421"  ],
+    "R000409":[0,0,0,0,"0","0","0",0,"Rep","Dana","Rohrabacher","R","CA",48,"DanaRohrabacher","","78476240421"  ],
     "B001273":[0,0,0,0,"0","0","0",0,"Rep","Diane","Black","R","TN",6,"RepDianeBlack","RepDianeBlack","186436274719648"  ],
     "B001275":[0,0,0,0,"0","0","0",0,"Rep","Larry","Bucshon","R","IN",8,"RepLarryBucshon","RepLarryBucshon","135670516492974"  ],
     "B001274":[0,0,0,0,"0","0","0",0,"Rep","Mo","Brooks","R","AL",5,"RepMoBrooks","RepMoBrooks","155220881193244"  ],
@@ -102,7 +102,7 @@ $(document).ready(function() {
     "F000458":[0,0,0,0,"0","0","0",0,"Rep","Stephen","Fincher","R","TN",8,"RepFincherTN08","CongressmanFincher","128861763849209"  ],
     "F000459":[0,0,0,0,"0","0","0",0,"Rep","Charles","Fleischmann","R","TN",3,"RepChuck","repchuck","189998554345168"  ],
     "F000456":[0,0,0,0,"0","0","0",0,"Rep","John","Fleming","R","LA",4,"RepFleming","larep04","372154186772"  ],
-    "F000457":[0,0,0,0,"0","0","0",0,"Sen","Alan","Franken","D","MN",null,"","SenatorFranken",""  ],
+    "F000457":[0,0,0,0,"0","0","0",0,"Sen","Alan","Franken","D","MN",null,"alfranken","SenatorFranken",""  ],
     "F000454":[0,0,0,0,"0","0","0",0,"Rep","Bill","Foster","D","IL",11,"RepBillFoster","RepBillFoster","102918290599"  ],
     "F000455":[0,0,0,0,"0","0","0",0,"Rep","Marcia","Fudge","D","OH",11,"RepMarciaFudge","marcialfudge","279006440801"  ],
     "F000450":[0,0,0,0,"0","0","0",0,"Rep","Virginia","Foxx","R","NC",5,"VirginiaFoxx","repvirginiafoxx","RepVirginiaFoxx"  ],
@@ -219,7 +219,7 @@ $(document).ready(function() {
     "G000558":[0,0,0,0,"0","0","0",0,"Rep","Brett","Guthrie","R","KY",2,"RepGuthrie","BrettGuthrie",""  ],
     "G000559":[0,0,0,0,"0","0","0",0,"Rep","John","Garamendi","D","CA",3,"RepGaramendi","garamendiCA10","182567716746"  ],
     "G000556":[0,0,0,0,"0","0","0",0,"Rep","Alan","Grayson","D","FL",9,"","repalangrayson",""  ],
-    "G000555":[0,0,0,0,"0","0","0",0,"Sen","Kirsten","Gillibrand","D","NY",null,"","KirstenEGillibrand",""  ],
+    "G000555":[0,0,0,0,"0","0","0",0,"Sen","Kirsten","Gillibrand","D","NY",null,"SenGillibrand","KirstenEGillibrand",""  ],
     "G000552":[0,0,0,0,"0","0","0",0,"Rep","Louie","Gohmert","R","TX",1,"RepLouieGohmert","GohmertTX01","50375006903"  ],
     "G000553":[0,0,0,0,"0","0","0",0,"Rep","Al","Green","D","TX",9,"RepAlGreen","RepAlGreen","136237609724391"  ],
     "G000550":[0,0,0,0,"0","0","0",0,"Rep","Phil","Gingrey","R","GA",11,"RepPhilGingrey","RepPhilGingrey","6934467868"  ],
@@ -594,7 +594,7 @@ $(document).ready(function() {
   
   // SAS Functions
   function sasGetFullName(repCode) {
-    return reps[repCode][8] + ". " + reps[repCode][9] + " " + reps[repCode][10] + '(' + reps[repCode][11]+ '-' + reps[repCode][12] + ')';
+    return reps[repCode][8] + ". " + reps[repCode][9] + " " + reps[repCode][10] + ' (' + reps[repCode][11]+ '-' + reps[repCode][12] + ')';
   }
   function sasGetScore(repCode) {
     score = reps[repCode][7];
@@ -626,6 +626,16 @@ $(document).ready(function() {
     }
     return grade;
   }
+  
+  // Returns "a" or "an" depending on phonetics.
+  function sasGetGradeArticle(grade) {
+    if ((grade == 'A') || (grade == 'F')) {
+      return 'an';
+    }
+    else {
+      return 'a';
+    }
+  }
 
   function sasRenderRep(repCode, sunlightResults) {
     
@@ -637,11 +647,21 @@ $(document).ready(function() {
     html += '</div>';
     html += '<div class="row">';
     html += '<h3>' + sasGetFullName(repCode) + '</h3>';
-    // @todo: Add actual tweet link.  Make twitter render func.
-    html += '<a class="tweat-scorecard" href="#">Tweet @' + repCode[14] + '</a>';
+    html += sasTwitterRender(repCode);
     html += '</div>';
     html += '</div>';
     
+    return html;
+  }
+  
+  function sasTwitterRender(repCode) {
+    var handle = reps[repCode][14];
+    var html = '';
+    if (handle != '') {
+      var grade = sasGetScore(repCode);
+      var article = sasGetGradeArticle(grade);
+      html = '<a target="__blank" class="tweet-scorecard" href="https://twitter.com/share?text=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.">Tweet @' + handle + '</a>';
+    }
     return html;
   }
   
