@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
   var reps = {
     "L000174":[0,0,4,0,"0","0","0",4,"Sen","Patrick","Leahy","D","VT",null,"SenatorLeahy","SenatorPatrickLeahy","178569152181267"  ],
     "M000485":[0,0,0,0,"0","0","0",0,"Rep","Mike","McIntyre","D","NC",7,"RepMikeMcIntyre","RepMikeMcIntyre","340903514856"  ],
@@ -552,6 +550,9 @@ $(document).ready(function() {
   
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
+    $('#lookup-controls').toggle();
+    $('#reps-lookup-loader').toggle();
+    sasSpinner('reps-lookup-loader');
     var req = smartyURL + 'street-address?auth-id=' + smartyAuthID + '&auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
 	  $.ajax({
       url: 'https://api.smartystreets.com/street-address',
@@ -569,7 +570,9 @@ $(document).ready(function() {
           sunlightGetDistricts(long, lat);
         }
         else {
-          $('#lookup-error').html("Sorry, we couldn't find any congressional districts for that address. Please check the address and try again.");
+          $('#lookup-error').html("No district found for that address.");
+          $('#lookup-controls').toggle();
+          $('#reps-lookup-loader').toggle();
         }
       },
     });
@@ -586,9 +589,12 @@ $(document).ready(function() {
         html += sasRenderRep(repCode, results[i]);
       }
       // Write scorecards, hide lookup, show scorecard.
+      $('#lookup-controls').toggle();
+      $('#reps-lookup-loader').toggle();
       $('#reps-list-mine-scorecards').html(html);
       $('#reps-lookup').toggle();
       $('#reps-list-mine').toggle();
+      
     });
   }
   
@@ -642,7 +648,7 @@ $(document).ready(function() {
     var html = '<div class="rep-individual col-md-4 col-lg-4">';
     html += '<div class="row">';
     // @todo: Where are images coming from?
-    html += '<img src="images/sen-barbera-boxer.png">';
+    html += '<img src="images/congress/' + repCode + '.jpg">';
     html += '<span class="grade">' + sasGetScore(repCode) + '</span>';
     html += '</div>';
     html += '<div class="row">';
@@ -673,7 +679,7 @@ $(document).ready(function() {
       html +=   '<td>' + sasGetScore(i) + '</td>';
       html +=   '<td>' + reps[i][11] + '</td>';
       html +=   '<td>' + reps[i][12] + '</td>';
-      html +=   '<td>' + reps[i][15] + '</td>';
+      html +=   '<td>' + sasTwitterRender(i) + '</td>';
       html += '</tr>';
     }
     return html;
@@ -681,10 +687,10 @@ $(document).ready(function() {
   
   function sasSpinner(div) {
     var opts = {
-      lines: 13, // The number of lines to draw
-      length: 20, // The length of each line
+      lines: 9, // The number of lines to draw
+      length: 10, // The length of each line
       width: 10, // The line thickness
-      radius: 30, // The radius of the inner circle
+      radius: 15, // The radius of the inner circle
       corners: 1, // Corner roundness (0..1)
       rotate: 0, // The rotation offset
       direction: 1, // 1: clockwise, -1: counterclockwise
@@ -701,29 +707,3 @@ $(document).ready(function() {
     var target = document.getElementById(div);
     var spinner = new Spinner(opts).spin(target);
   }
-  
-  // Main
-  
-  // On Click, lookup address.
-  $('#lookup-submit').click(function() {
-    var street = $('#lookup-street').val();
-    var zip = $('#lookup-zip').val();
-    if ((street.trim() != '') && (zip.trim() != '')) {
-      $('#lookup-error').html('');
-      smartyGetGeo(street, zip);
-    }
-    else {
-      $('#lookup-error').html('Please enter a street address and zip code.')
-    }
-  });
-  
-  $('#new-search-link').click(function() {
-    $('#reps-list-mine').toggle();
-    $('#reps-list-mine-scorecards').html('');
-    $('#reps-lookup').toggle();
-  });
-  
-  // For Reps Page
-  // @todo: Need to show this only for reps-list page.
-  //$("#reps-all-table").tablesorter();
-});

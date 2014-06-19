@@ -13,6 +13,7 @@
     <script src="lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="lib/spin/spin.min.js" type="text/javascript"></script>
     <script src="js/sas.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
     
     </head>
      
@@ -23,10 +24,11 @@
         <h1 id="header-title">Stand Against Spying</h1>
         <nav id="header-nav">
           <ul class="menu">
-            <li><a href="#">Menu link 1</a></li>
-            <li><a href="#">Menu link 2</a></li>
-            <li><a href="#">Menu link 3</a></li>
-            <li><a href="#">Menu link 4</a></li>
+            <li><a href="#">About</a></a></li>
+            <li><a href="#">Methodology</a></li>
+            <li><a href="rep-list.html">Full Congressional Scorecard</a></li>
+            <li><a href="#letter-signup">Open Letter</a></li>
+            <li><a href="#">Updates</a></li>
           </ul>
         </nav>
 
@@ -125,7 +127,7 @@
       <section id="reps-lookup">
         <div id="reps-lookup-box">
           <h2><span class="blue-text">Where do</span> your representatives <span class="blue-text">stand on illegal mass spying?</span></h2>
-          <p>Entery your zip code to see how your reps did, or sign our <a href="#letter-signup">Open Letter.</a>
+          <p>Enter your zip code to see how your reps did, or sign our <a href="#letter-signup">Open Letter.</a>
           <form id='reps-lookup-form' action="#">
             <div class="clearfix">
               <div id="lookup-error"></div>
@@ -136,9 +138,10 @@
             <div class="clearfix">
               <input id="lookup-zip" class="text" type="text" placeholder="Enter Zip Code" />
             </div>
-            <div class="clearfix">
+            <div id="lookup-controls" class="clearfix">
               <input id="lookup-submit" class="submit" type="submit" value="Lookup" /> <a id="no-zipcode-btn" href="#letter-signup">No zip code?</a>
             </div>
+            <div id="reps-lookup-loader"></div>
           </form>
         </div>
       </div>
@@ -150,7 +153,9 @@
           <!-- Reps-Mine go here -->
         </div>
         <div id="reps-list-mine-footer" class="row">
-          <a id="full-scorecard-link" href="rep-list.html">Full congressional scorecard</a> <a id="new-search-link" href="#">New zip code search</a>
+          <a id="full-scorecard-link" href="rep-list.html">Full congressional scorecard</a>
+          <a id="new-search-link" href="#">New zip code search</a>
+          <a href="#letter-signup">Sign our open letter</a>
         </div>
       </div>
     </section>

@@ -181,9 +181,18 @@ ul.menu li {
 }
 #reps-lookup-box h2 {
   font-size: 30px;
+  text-align: left;
+}
+
+#lookup-error {
+  font-size: 14px;
+  color: #ff0000;
+  margin-bottom: 4px;
+  text-align: center;
 }
 #reps-lookup-box form {
   padding: 1px 40px;
+  margin-bottom: 5px;
 }
 #reps-lookup-box form input.text  {
   text-align: center;
@@ -210,7 +219,14 @@ ul.menu li {
   margin: 10px auto;
   display: block;
   font-size: 20px;
+  text-transform: uppercase;
 }
+
+#reps-lookup-loader {
+  height: 77px;
+  display: none;  
+}
+
 #no-zipcode-btn {
   width: 150px;
   text-align: center;
