@@ -526,6 +526,13 @@ svg #eyelid-10 {
   }
 }
 
+#scorecard-box th,
+#scorecard-box td {
+  color: #000000;
+  font-size: 18px;
+  padding-right: 24px;
+}
+
 /* Mediums size devices and below (991px and below) */
 @media (max-width: 991px) {
 
