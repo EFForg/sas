@@ -128,7 +128,7 @@ h2 {
 #header-nav a {
   color: #66B2FF;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -164,6 +164,8 @@ ul.menu li {
 
 #reps-list-mine {
   display: none;
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 
 #reps-lookup-box {
@@ -337,9 +339,63 @@ svg #eyelid-1 {
   animation: blink1 0.2s ease alternate infinite;
   animation-delay: 3s;
 }
-
 .rep-individual {
   padding: 30px;
+  text-align: center;
+}
+.rep-individual img {
+  border-top: black solid 1px;
+  border-left: black solid 1px;
+  border-bottom: black solid 1px;  
+}
+.rep-individual .grade {
+  background-color: #007EFF;
+  font-size: 85px;
+  text-align: center;
+  display: inline-block;
+  padding: 4px 0 0;
+  width: 100px;
+  vertical-align: top;
+  font-family: 'antoniobold';
+  border-top: black solid 1px;
+  border-right: black solid 1px;
+  border-bottom: black solid 1px;
+}
+.rep-individual h3 {
+  font-size: 19px;
+  font-family: 'antonioregular';
+  color: #007EFF;
+  text-align: center;
+  margin: 10px 0 15px;
+}
+.rep-individual .tweet-scorecard {
+  color: black;
+  padding: 2px 15px 2px 35px;
+  background: #007EFF url(../images/twitter-sprite.png) no-repeat 10px 3px;
+  border: black solid 1px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 15px;  
+}
+.rep-individual:hover .tweet-scorecard {
+  border: white solid 1px;
+  color: white;
+  background-position: 10px -25px;
+  text-decoration: none;
+}
+.rep-individual:hover h3 {
+  color: white;
+  text-decoration: underline;
+}
+.rep-individual:hover .grade {
+  border-top: white solid 1px;
+  border-right: white solid 1px;
+  border-bottom: white solid 1px;
+}
+.rep-individual:hover img {
+  border-top: white solid 1px;
+  border-left: white solid 1px;
+  border-bottom: white solid 1px;  
 }
 #reps-list-mine-footer {
   text-align: center;
