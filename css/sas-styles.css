@@ -126,7 +126,7 @@ h2 {
   z-index: 200;
 }
 #header-nav a {
-  color: #62AFFF;
+  color: #66B2FF;
   text-transform: uppercase;
   font-size: 16px;
   margin-left: 15px;
@@ -349,7 +349,6 @@ svg #eyelid-1 {
   text-transform: uppercase;
   font-weight: bold;
 }
-
 #letter-signup-outside-us {
   color: #ff0000;
 }
@@ -360,6 +359,18 @@ svg #eyelid-1 {
 
 #country-code {
   display: none;
+}
+/* Letter signup */
+#letter-text {
+  background-color: #007EFF;
+  padding: 20px 30px;
+  color: white;
+}
+#letter-signup h2 {
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 0px;
+  line-height: 10px;
 }
 
 /* Large devices (large desktops, 960px and up) */
