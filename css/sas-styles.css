@@ -499,6 +499,26 @@ svg #eyelid-10 {
   top: -155px;
   left: 10px;
 }
+
+#scorecard {
+  padding-top: 10px;
+  background: #000000;
+}
+
+#scorecard-box {
+  width: 50%;
+  background-color: white;
+  color: black;
+  padding: 1px 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  top: -10px;
+  -webkit-box-shadow: 1px 1px 25px 5px #050505;
+  box-shadow: 1px 1px 25px 5px #050505;
+  font-size: 18px;
+}
+
 /* Large devices (large desktops, 960px and up) */
 @media (min-width: 960px) {
   #img-banner {
