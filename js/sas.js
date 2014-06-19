@@ -570,7 +570,7 @@
           sunlightGetDistricts(long, lat);
         }
         else {
-          $('#lookup-error').html("Sorry, we couldn't find any congressional districts for that address. Please check the address and try again.");
+          $('#lookup-error').html("No district found for that address.");
           $('#lookup-controls').toggle();
           $('#reps-lookup-loader').toggle();
         }

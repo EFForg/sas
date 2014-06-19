@@ -182,6 +182,13 @@ ul.menu li {
 #reps-lookup-box h2 {
   font-size: 30px;
 }
+
+#lookup-error {
+  font-size: 14px;
+  color: #ff0000;
+  margin-bottom: 4px;
+  text-align: center;
+}
 #reps-lookup-box form {
   padding: 1px 40px;
 }
