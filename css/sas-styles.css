@@ -350,6 +350,18 @@ svg #eyelid-1 {
   font-weight: bold;
 }
 
+#letter-signup-outside-us {
+  color: #ff0000;
+}
+
+#letter-signup-outside-us:hover {
+  text-decoration: underline;
+}
+
+#country-code {
+  display: none;
+}
+
 /* Large devices (large desktops, 960px and up) */
 @media (min-width: 960px) {
   #img-banner {

@@ -180,17 +180,21 @@
             <input id="petition_id" type="hidden" value="9999" />
           </div>
           <div class="row">
-            <input id="first_name" name="first_name" type="text" placeholder="First Name" />
-          </div>
-          <div class="row">
-            <input id="last_name" name="last_name" type="text" placeholder="Last Name" />
-          </div>
-          <div class="row">
             <input id="email" name="email" type="text" placeholder="Email Address" />
           </div>
           <div class="row">
+            <input id="first-name" name="first_name" type="text" placeholder="First Name" />
+          </div>
+          <div class="row">
+            <input id="last-name" name="last_name" type="text" placeholder="Last Name" />
+          </div>
+          <div class="row">
+            <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" />
+            <span id="letter-signup-outside-us">Outside the US?</span>
+          </div>
+          <div class="row">
             @todo: Is there preferred HTML for this select?
-            <select id="country_code" name="country_code">
+            <select id="country-code" name="country_code">
               <option value="AF">Afghanistan</option>
               <option value="AX">Åland Islands</option>
               <option value="AL">Albania</option>
@@ -438,19 +442,19 @@
             </select>
           </div>
           <div class="row">
-            <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" />
+            @todo Are we collecting this?
+            <input id="street-address" name="street_address" type="text" placeholder="Street Address" />
           </div>
           <div class="row">
-            <input id="street_address" name="street_address" type="text" placeholder="Street Address" />
-          </div>
-          <div class="row">
+            @todo Are we collecting this?
             <input id="city" name="city" type="text" placeholder="City" />
           </div>
           <div class="row">
+            @todo Are we collecting this?
             <input id="state" name="state" type="text" placeholder="State / Province" />
           </div>
           <div class="row">
-            <input id="anonymous" name="anonymous" type="checkbox">Sign Anonymously?
+            <input id="anonymous" name="anonymous" type="checkbox">Don't show my name or my city on this page (we'll only list your country).
           </div>
             <div class="row">
               <input id="letter-submit" name="letter-submit" type="submit" value="Sign" />
