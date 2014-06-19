@@ -181,6 +181,7 @@ ul.menu li {
 }
 #reps-lookup-box h2 {
   font-size: 30px;
+  text-align: left;
 }
 
 #lookup-error {
