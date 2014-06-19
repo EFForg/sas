@@ -175,28 +175,30 @@
           <div class="col-md-6">
             <h2><span class="blue-text">Dear Mr. President:</span></h2>
             <div id="letter-text">
-              <p>@todo: Letter signup text goes here.</a>
+              <p>@todo: Letter signup text goes here.</p>
             </div>
           </div>
           <!-- Letter signup goes here. -->
           <div id="letter-signup-form" class="col-md-6">
-            <form action="https://act.eff.org/tools/petition">
+            <form action="https://act.eff.org/tools/petition" method="post">
               <div class="row">
-                @todo: Fill in correct petition id.
-                <input id="petition_id" type="hidden" value="9999" />
+                <input name="signature[petition_id]" type="hidden" value="43" />
               </div>
               <div class="row">
-                <input id="email" name="email" type="text" placeholder="Email Address" />
+                <input name="signature[email]" type="text" placeholder="Email Address" />
               </div>
               <div class="row">
-                <input id="first_name" name="first_name" type="text" placeholder="First Name" />
+                <input name="signature[first_name]" type="text" placeholder="First Name" />
               </div>
               <div class="row">
-                <input id="last_name" name="last_name" type="text" placeholder="Last Name" />
+                <input name="signature[last_name]" type="text" placeholder="Last Name" />
               </div>
               <div class="row">
-                @todo: Is there preferred HTML for this select?
-                <select id="country_code" name="country_code">
+                <input name="signature[zipcode]" type="text" placeholder="Zip Code" />
+                <span id="letter-signup-outside-us">Outside the US?</span>
+              </div>
+              <div class="row">
+                <select id="country-code" name="signature[country_code]">
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
                   <option value="AL">Albania</option>
@@ -444,19 +446,7 @@
                 </select>
               </div>
               <div class="row">
-                <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" />
-              </div>
-              <div class="row">
-                <input id="street_address" name="street_address" type="text" placeholder="Street Address" />
-              </div>
-              <div class="row">
-                <input id="city" name="city" type="text" placeholder="City" />
-              </div>
-              <div class="row">
-                <input id="state" name="state" type="text" placeholder="State / Province" />
-              </div>
-              <div class="row">
-                <input id="anonymous" name="anonymous" type="checkbox">Sign Anonymously?</a>
+                <input name="signature[anonymous]" type="checkbox">Sign Anonymously?
               </div>
                 <div class="row">
                   <input id="letter-submit" name="letter-submit" type="submit" value="Sign" />
