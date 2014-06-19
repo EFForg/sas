@@ -211,7 +211,7 @@ ul.menu li {
   margin-bottom: 10px;
   width: 100%;
 }
-#reps-lookup-box form input.submit {
+#reps-lookup-box form span {
   background-color: #007EFF;
   color: white;
   font-family: 'antonioregular';

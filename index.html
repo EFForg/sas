@@ -132,7 +132,7 @@
       <div id="reps-lookup-box">
         <h2><span class="blue-text">Where do</span> your representatives <span class="blue-text">stand on illegal mass spying?</span></h2>
         <p>Enter your zip code to see how your reps did, or sign our <a href="#letter-signup">Open Letter.</a></p>
-        <form id='reps-lookup-form' action="#">
+        <form id='reps-lookup-form'>
           <div class="clearfix">
             <div id="lookup-error"></div>
           </div>
@@ -143,7 +143,7 @@
             <input id="lookup-zip" class="text" type="text" placeholder="Enter Zip Code" />
           </div>
           <div id="lookup-controls" class="clearfix">
-            <input id="lookup-submit" class="submit" type="submit" value="Lookup" /> <a id="no-zipcode-btn" href="#letter-signup">No zip code?</a>
+            <span id="lookup-submit" class="submit">Lookup</span> <a id="no-zipcode-btn" href="#letter-signup">No zip code?</a>
           </div>
           <div id="reps-lookup-loader"></div>
         </form>
