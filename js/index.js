@@ -17,4 +17,8 @@ $(document).ready(function() {
     $('#reps-list-mine-scorecards').html('');
     $('#reps-lookup').toggle();
   });
+  
+  $('#letter-signup-outside-us').click(function() {
+    $('#country-code').toggle();
+  });
 });
