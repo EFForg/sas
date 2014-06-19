@@ -166,42 +166,48 @@
     <section id="img-banner">
       <img src="images/10561986376_c91c240126_o.jpg" alt="Photo of people at protest holding a banner that says: Defend Constitutional Rights. Stop Mass Surveillance. Website: topwatching.us " />
     </section>
-
-    <section id="about" class="container">
-      <h2>We're <span class="blue-text">standing</span> against mass <span class="blue-text">spying</span></h2>
-      <p>We are a coalition of organizations and individuals from across the political spectrum advocating for transparency and an end to mass survaillence. <br/> <a href="#">Read our story</a>.</p>
-      <p>We've rated each member of Congress and President Obama on their actions to end or promote warrent-less spying. <a href="#">Read about our methodology</a>.
-    </section>
     
     <section id="letter-signup">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <h2>We're <span class="blue-text">standing</span> against mass <span class="blue-text">spying</span></h2>
+          <div id="letter-wrapper" class="col-md-8 col-lg-8">
             <h2><span class="blue-text">Dear Mr. President:</span></h2>
             <div id="letter-text">
               <p>@todo: Letter signup text goes here.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra vel magna sit amet facilisis. Pellentesque condimentum suscipit mauris, quis aliquam urna consequat ac. Aliquam non nulla quis lorem aliquam tristique. Duis ac adipiscing risus, a lobortis enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed tincidunt leo et tempus dignissim. Nunc pellentesque elit a nisi ultricies faucibus. Donec varius scelerisque sodales. Proin eget velit gravida est placerat cursus. Donec augue leo, dapibus vitae neque eu, blandit egestas nisl. Nullam viverra mi vel mattis pharetra. Proin ut leo nec nunc euismod pulvinar condimentum ut lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum accumsan ipsum ac accumsan.</p>
+
+<p>Fusce commodo accumsan iaculis. Nulla vestibulum bibendum turpis non ultrices. Integer id nisl et neque vehicula porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel est sit amet turpis malesuada cursus eu sed purus. Nullam vulputate a metus et imperdiet. Nullam non elementum quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet quam mauris. Pellentesque porta tortor vel semper tincidunt.</p>
+
+<p>Pellentesque vehicula libero arcu, eget mollis turpis ullamcorper ac. Donec viverra nisi quis mauris volutpat, in pharetra justo laoreet. Maecenas vehicula a dolor sit amet venenatis. Integer sem leo, rutrum suscipit tellus in, bibendum fringilla nibh. Praesent in nisi et dui sodales rutrum. Nullam quis dui lacinia, pulvinar magna ac, commodo ante. Cras id varius nulla, suscipit malesuada est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean dignissim sagittis libero. Fusce porta arcu in massa ornare, id semper eros consectetur. Vestibulum nibh lectus, commodo sed tristique eu, cursus ac orci. Aenean augue orci, congue ac libero nec, mattis mattis velit. Duis pellentesque elit id malesuada pulvinar. Cras ut auctor nulla. Nunc nec nibh eget metus consequat iaculis in sit amet ligula.</p>
+
+<p>Suspendisse a dui tristique, bibendum quam a, congue risus. In tempus neque et sapien rhoncus gravida. Cras interdum est vel dapibus pulvinar. Donec viverra est malesuada, ultrices libero tempor, elementum eros. Nam dapibus sed arcu at ultricies. Sed viverra ligula at enim pretium aliquet. Proin posuere metus id sapien imperdiet, in pellentesque dui accumsan. Pellentesque nec malesuada velit. Duis vehicula nisl vitae purus ornare, molestie faucibus ante ullamcorper. Pellentesque scelerisque ligula lectus, eu hendrerit ipsum commodo at. Nunc tempus quis ipsum id tristique. Morbi nec risus lobortis, pharetra mi id, pharetra odio. Sed lobortis euismod odio, ac commodo massa commodo et. Aenean posuere, ante eu blandit commodo, felis nisl viverra tellus, eget sollicitudin urna velit eget velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tristique egestas ultricies.</p>
+
+
             </div>
           </div>
           <!-- Letter signup goes here. -->
-          <div id="letter-signup-form" class="col-md-6">
+          <div id="letter-signup-form" class="col-md-3 col-lg-3">
+            <h3>Sign the open letter</h3>
+            <img class="letter-recipient-headshot" src="images/letter-signup-obama.png" alt="Photo of Barack Obama"/>
             <form action="https://act.eff.org/tools/petition" method="post">
-              <div class="row">
+              <div class="clearfix">
                 <input name="signature[petition_id]" type="hidden" value="43" required />
               </div>
-              <div class="row">
-                <input name="signature[email]" type="text" placeholder="Email Address" required />
+              <div class="clearfix">
+                <input class="text" name="signature[email]" type="text" placeholder="Email" required />
               </div>
-              <div class="row">
-                <input name="signature[first_name]" type="text" placeholder="First Name" required />
+              <div class="clearfix">
+                <input class="text" name="signature[first_name]" type="text" placeholder="First Name" required />
               </div>
-              <div class="row">
-                <input name="signature[last_name]" type="text" placeholder="Last Name" required />
+              <div class="clearfix">
+                <input class="text" name="signature[last_name]" type="text" placeholder="Last Name" required />
               </div>
-              <div class="row">
-                <input name="signature[zipcode]" type="text" placeholder="Zip Code" required />
+              <div class="clearfix">
+                <input id="zip-code" class="text" name="signature[zipcode]" type="text" placeholder="Zip Code" required />
                 <span id="letter-signup-outside-us">Outside the US?</span>
               </div>
-              <div class="row">
+              <div class="clearfix">
                 <select id="country-code" name="signature[country_code]" required>
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
@@ -449,11 +455,11 @@
                   <option value="ZW">Zimbabwe</option>
                 </select>
               </div>
-              <div class="row">
-                <input name="signature[anonymous]" type="checkbox">Sign Anonymously?
+              <div class="checkbox clearfix">
+                <input name="signature[anonymous]" type="checkbox"> Sign Anonymously?
               </div>
-                <div class="row">
-                  <input id="letter-submit" name="letter-submit" type="submit" value="Sign" />
+                <div class="clearfix">
+                  <input id="letter-submit" name="letter-submit" type="submit" value="Speak Out" />
                 </div>
             </form>
           </div>
