@@ -182,23 +182,23 @@
           <div id="letter-signup-form" class="col-md-6">
             <form action="https://act.eff.org/tools/petition" method="post">
               <div class="row">
-                <input name="signature[petition_id]" type="hidden" value="43" />
+                <input name="signature[petition_id]" type="hidden" value="43" required />
               </div>
               <div class="row">
-                <input name="signature[email]" type="text" placeholder="Email Address" />
+                <input name="signature[email]" type="text" placeholder="Email Address" required />
               </div>
               <div class="row">
-                <input name="signature[first_name]" type="text" placeholder="First Name" />
+                <input name="signature[first_name]" type="text" placeholder="First Name" required />
               </div>
               <div class="row">
-                <input name="signature[last_name]" type="text" placeholder="Last Name" />
+                <input name="signature[last_name]" type="text" placeholder="Last Name" required />
               </div>
               <div class="row">
-                <input name="signature[zipcode]" type="text" placeholder="Zip Code" />
+                <input name="signature[zipcode]" type="text" placeholder="Zip Code" required />
                 <span id="letter-signup-outside-us">Outside the US?</span>
               </div>
               <div class="row">
-                <select id="country-code" name="signature[country_code]">
+                <select id="country-code" name="signature[country_code]" required>
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
                   <option value="AL">Albania</option>
