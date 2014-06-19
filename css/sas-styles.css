@@ -266,7 +266,7 @@ ul.menu li {
   transform: translateZ(0.3px) scale(0.7);
   width: 98px;
   height: 110px;
-  background: url(../images/eye-lg.png) no-repeat;
+  /* background: url(../images/eye-lg.png) no-repeat; */
   display: block;
   position: absolute;
   z-index: 100;
@@ -278,7 +278,7 @@ ul.menu li {
   transform: translateZ(0.3px) scale(0.7);
   width: 62px;
   height: 74px;
-  background: url(../images/eye-md.png) no-repeat;
+ /* background: url(../images/eye-md.png) no-repeat; */
   display: block;
   position: absolute;
   z-index: 100;
@@ -290,7 +290,7 @@ ul.menu li {
   transform: translateZ(0.1px) scale(0.9);
   width: 31px;
   height: 38px;
-  background: url(../images/eye-sm.png) no-repeat;
+  /* background: url(../images/eye-sm.png) no-repeat; */
   display: block;
   position: absolute;
   z-index: 100;
@@ -318,6 +318,24 @@ ul.menu li {
 #eye6 {
   top: 69%;
   left: 69%;
+}
+svg .eyelid {
+  opacity: 0;
+}
+@keyframes blink1 {
+  0% { opacity: 1; }
+  30% { opacity: 1; }
+  60% { opacity: 0; }
+  70% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes blink1 {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+svg #eyelid-1 {
+  animation: blink1 0.2s ease alternate infinite;
+  animation-delay: 3s;
 }
 
 .rep-individual {
