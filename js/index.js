@@ -23,9 +23,8 @@ $(document).ready(function() {
   });
   
   // Check for "Thank You" response from action center;
-  var showThanks = location.search.split('thankyou=')[1][0];
-  if (showThanks == 1) {
-    // @todo What do we do on thank you response?
+  var search = location.search.split('?thankyou=');
+  if (search[1] == 1) {
     $('#show-thanks').toggle();
   }
 });
