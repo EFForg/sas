@@ -155,6 +155,11 @@ ul.menu li {
 }
 
 /* Sections */
+
+#show-thanks {
+  display: none;
+}
+
 #reps-lookup,
 #reps-list-mine {
   background-color: black;
@@ -360,6 +365,7 @@ svg #eyelid-1 {
 #country-code {
   display: none;
 }
+
 /* Letter signup */
 #letter-text {
   background-color: #007EFF;
