@@ -285,6 +285,7 @@ ul.menu li {
   display: block;
   position: absolute;
   z-index: 100;
+  display: none;
 }
 .eye-md {
   -moz-transform: translateZ(0.2px) scale(0.7);
@@ -297,6 +298,7 @@ ul.menu li {
   display: block;
   position: absolute;
   z-index: 100;
+  display: none;
 }
 .eye-sm {
   -moz-transform: translateZ(0.1px) scale(0.9);
@@ -309,6 +311,7 @@ ul.menu li {
   display: block;
   position: absolute;
   z-index: 100;
+  display: none;
 }
 #eye1 {
   left: 29%;
@@ -342,32 +345,68 @@ svg .eyelid {
   20% { opacity: 0; }
   40% { opacity: 0; }
   60% { opacity: 0; }
-  80% { opacity: 0; }
+  90% { opacity: 1; }
   100% { opacity: 1; }
 }
-svg #eyelid-1 {
-  animation: blink 0.5s ease alternate infinite;
+@keyframes blink2 {
+  0% { opacity: 1; }
+  10% { opacity: 1; }
+  40% { opacity: 0; }
+  60% { opacity: 0; }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
 }
-svg #eyelid-3 {
-  animation: blink 0.5s ease alternate infinite;
+.eye-blink svg #eyelid-1 {
+  animation: blink 0.5s ease alternate 1;
+}
+.eye-blink svg #eyelid-2 {
+  animation: blink 0.5s ease alternate 1;
   animation-delay: 0.03s;
 }
-svg #eyelid-7 {
-  animation: blink 0.5s ease alternate infinite;
+.eye-blink svg #eyelid-3 {
+  animation: blink 0.5s ease alternate 1;
   animation-delay: 0.06s;
 }
-svg #eyelid-8 {
-  animation: blink 0.5s ease alternate infinite;
+.eye-blink svg #eyelid-5 {
+  animation: blink 0.5s ease alternate 1;
   animation-delay: 0.09s;
 }
-svg #eyelid-9 {
-  animation: blink 0.5s ease alternate infinite;
+.eye-blink svg #eyelid-7 {
+  animation: blink 0.5s ease alternate 1;
   animation-delay: 0.12s;
 }
-svg #eyelid-10 {
-  animation: blink 0.5s ease alternate infinite;
+.eye-blink svg #eyelid-8 {
+  animation: blink 0.5s ease alternate 1;
   animation-delay: 0.15s;
 }
+.eye-blink svg #eyelid-9 {
+  animation: blink 0.5s ease alternate 1;
+  animation-delay: 0.18s;
+}
+.eye-blink svg #eyelid-10 {
+  animation: blink 0.5s ease alternate 1;
+  animation-delay: 0.21s;
+}
+/* svg #eyelid-8 {
+  animation: blink2 0.5s ease alternate infinite;
+}
+svg #eyelid-6 {
+  animation: blink2 0.5s ease alternate infinite;
+  animation-delay: 0.03s;
+}
+svg #eyelid-4 {
+  animation: blink2 0.5s ease alternate infinite;
+  animation-delay: 0.06s;
+}
+svg #eyelid-2 {
+  animation: blink2 0.5s ease alternate infinite;
+  animation-delay: 0.09s;
+}
+svg #eyelid-1 {
+  animation: blink2 0.5s ease alternate infinite;
+  animation-delay: 0.12s;
+} */
+
 .rep-individual {
   padding: 30px;
   text-align: center;
