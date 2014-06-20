@@ -10,12 +10,12 @@ $(document).ready(function() {
   var eye6 = 6000;
   
   // Option #1 - Fade in at different intervals.
-  $("#eye1").hide().delay(3200).fadeIn("slow");
-  $("#eye2").hide().delay(3600).fadeIn("slow");
-  $("#eye3").hide().delay(4800).fadeIn("slow");
-  $("#eye4").hide().delay(3800).fadeIn("slow");
-  $("#eye5").hide().delay(5000).fadeIn("slow");
-  $("#eye6").hide().delay(3000).fadeIn("slow");
+  $("#eye1").hide().delay(2700).fadeIn("slow");
+  $("#eye2").hide().delay(3100).fadeIn("slow");
+  $("#eye3").hide().delay(4100).fadeIn("slow");
+  $("#eye4").hide().delay(3300).fadeIn("slow");
+  $("#eye5").hide().delay(4200).fadeIn("slow");
+  $("#eye6").hide().delay(2500).fadeIn("slow");
   
   // Option #2 - Fade in all at once.
   /*
