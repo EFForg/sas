@@ -26,6 +26,7 @@ $(document).ready(function() {
   var thanks = getParameterByName('thankyou');
   if (thanks == 1) {
     $('#show-thanks').toggle();
+    window.location.hash = '#show-thanks';
   }
   
   effRecentSigners();
