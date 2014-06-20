@@ -548,6 +548,9 @@
   var smartyAuthToken = '435887452743487318';
   var smartyURL = 'https://api.smartystreets.com/';
   
+  // EFF API
+  var effURL = 'https://act.eff.org/petition/43/recent_signatures';
+  
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
     $('#lookup-controls').toggle();
@@ -596,6 +599,42 @@
       $('#reps-list-mine').toggle();
       
     });
+  }
+  
+  // EFF Recent Signers
+  // @todo: Make work with endpoint.  Same origin policy stuff...
+  function effRecentSigners() {
+    var html = '';
+    var req = effURL;
+	  $.ajax({
+      url: effURL,
+      dataType: 'JSONP',
+      success: function (data, status, xhr) {
+        alert('do we happen');
+        var results = data['results'];
+        for (var i in results) {
+          var fullName = results[i]['first_name'] + ' ' + results[i]['last_name'];
+          var country = results[i]['country']
+          var time = results[i]['time_ago'];;
+          html += fullName + ', ' + country + ', ' + time + '<br/>';
+          $('body').html(html);
+        }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus);
+        alert(errorThrown);
+      }
+    });
+/*
+      var results = data['results'];
+      for (var i in results) {
+        var fullName = results[i]['first_name'] + ' ' + results[i]['last_name'];
+        var country = results[i]['country']
+        var time = results[i]['time_ago'];;
+        html += fullName + ', ' + country + ', ' + time + '<br/>';
+        $('body').html(html);
+      }
+*/
   }
   
   // SAS Functions
