@@ -549,7 +549,9 @@
   var smartyURL = 'https://api.smartystreets.com/';
   
   // EFF API
-  var effURL = 'https://act.eff.org/petition/43/recent_signatures';
+  // @todo Change to real URL @ launch
+  //var effURL = 'https://act.eff.org/petition/43/recent_signatures';
+  var effURL = 'fakeJSON';
   
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
@@ -602,38 +604,23 @@
   }
   
   // EFF Recent Signers
-  // @todo: Make work with endpoint.  Same origin policy stuff...
   function effRecentSigners() {
-    var html = '';
+    // Let's generate all html, so if there's a failure nothing displays.
+    var html = '<h3>Recent Signatories</h3>';
     var req = effURL;
     $.ajax({
       url: effURL,
       success: function (data, status, xhr) {
-        alert('do we happen');
-        var results = data['results'];
+        var results = JSON.parse(data);
         for (var i in results) {
-          var fullName = results[i]['first_name'] + ' ' + results[i]['last_name'];
-          var country = results[i]['country']
-          var time = results[i]['time_ago'];;
-          html += fullName + ', ' + country + ', ' + time + '<br/>';
-          $('body').html(html);
+          var fullName = '<div class="recent-sign-name">' + results[i]['first_name'] + ' ' + results[i]['last_name'] + '</div>';
+          var country = '<div class="recent-sign-country">' + results[i]['country_code'] + '</div>';
+          var time = '<div class="recent-sign-time">' + results[i]['time_ago'] + '</div>';
+          html += '<div class="recent-sign-item">' + fullName + country + time + '</div>';
         }
+        $('#recent-signatories').html(html);
       },
-      error: function(jqXHR, textStatus, errorThrown) {
-        alert(textStatus);
-        alert(errorThrown);
-      }
     });
-/*
-      var results = data['results'];
-      for (var i in results) {
-        var fullName = results[i]['first_name'] + ' ' + results[i]['last_name'];
-        var country = results[i]['country']
-        var time = results[i]['time_ago'];;
-        html += fullName + ', ' + country + ', ' + time + '<br/>';
-        $('body').html(html);
-      }
-*/
   }
   
   // SAS Functions
@@ -685,7 +672,6 @@
     
     var html = '<div class="rep-individual col-md-4 col-lg-4">';
     html += '<div class="row">';
-    // @todo: Where are images coming from?
     html += '<img src="images/congress/' + repCode + '.jpg">';
     html += '<span class="grade">' + sasGetScore(repCode) + '</span>';
     html += '</div>';

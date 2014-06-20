@@ -27,4 +27,6 @@ $(document).ready(function() {
   if (search[1] == 1) {
     $('#show-thanks').toggle();
   }
+  
+  effRecentSigners();
 });
