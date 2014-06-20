@@ -616,7 +616,9 @@
           var fullName = '<div class="recent-sign-name">' + results[i]['first_name'] + ' ' + results[i]['last_name'] + '</div>';
           var country = '<div class="recent-sign-country">' + results[i]['country_code'] + '</div>';
           var time = '<div class="recent-sign-time">' + results[i]['time_ago'] + '</div>';
-          html += '<div class="recent-sign-item">' + fullName + country + time + '</div>';
+          var left = '<div class="recent-sign-left">' + fullName + country + '</div>';
+          var right = '<div class="recent-sign-right">' + time + '</div>';
+          html += '<div class="recent-sign-item">' + left + right + '</div>';
         }
         $('#recent-signatories').html(html);
       },
