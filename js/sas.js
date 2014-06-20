@@ -539,6 +539,14 @@
     "S001194":[0,0,4,0,"0","0","0",4,"Sen","Brian","Schatz","D","HI",null,"SenBrianSchatz","senbrianschatz","357806137657533"  ],
   }
   
+  var partnerFilter = {
+    'gp': 'Green Peace',
+    'fftf': 'Fight for the Future',
+    'fp': 'Free Press',
+    'an': 'Access Now',
+    'sf': 'Sunlight Foundation',
+  }
+  
   // Sunlight API
   var sunlightKey = 'f35f11a42f3f4f89b043c0e7b091f0d7';
   var sunlightURL = 'https://congress.api.sunlightfoundation.com/';
@@ -729,4 +737,23 @@
     };
     var target = document.getElementById(div);
     var spinner = new Spinner(opts).spin(target);
+  }
+
+  // @todo Switch THANKYOU to use this.
+  function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&\/#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  function effSignupParter() {
+    // Default to Green Peace
+    var partner = 'Green Peace';
+    var pCode = getParameterByName('r');
+    if (partnerFilter[pCode]) {
+      partner = partnerFilter[pCode];
+    }
+    $('#partner-newsletter-checkbox').val(pCode);
+    $('#partner-newsletter-text').text(partner);
   }
