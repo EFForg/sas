@@ -606,9 +606,8 @@
   function effRecentSigners() {
     var html = '';
     var req = effURL;
-	  $.ajax({
+    $.ajax({
       url: effURL,
-      dataType: 'JSONP',
       success: function (data, status, xhr) {
         alert('do we happen');
         var results = data['results'];
