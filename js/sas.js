@@ -618,9 +618,9 @@
       url: effURL,
       success: function (data, status, xhr) {
         for (var i in data) {
-          var fullName = '<div class="recent-sign-name">' + data[i]['first_name'] + ' ' + data[i]['last_name'] + '</div>';
-          var country = '<div class="recent-sign-country">' + data[i]['country_code'] + '</div>';
-          var time = '<div class="recent-sign-time">' + data[i]['time_ago'] + '</div>';
+          var fullName = '<div class="recent-sign-name">' + escapeHtml(data[i]['first_name']) + ' ' + escapeHtml(data[i]['last_name']) + '</div>';
+          var country = '<div class="recent-sign-country">' + escapeHtml(data[i]['country_code']) + '</div>';
+          var time = '<div class="recent-sign-time">' + escapeHtml(data[i]['time_ago']) + '</div>';
           var left = '<div class="recent-sign-left">' + fullName + country + '</div>';
           var right = '<div class="recent-sign-right">' + time + '</div>';
           html += '<div class="recent-sign-item">' + left + right + '</div>';
@@ -756,3 +756,8 @@
     $('#partner-newsletter-checkbox').val(pCode);
     $('#partner-newsletter-text').text(partner);
   }
+
+function escapeHtml(text) {
+  var escapedValue = $('<div/>').text(text).html();
+  return escapedValue;
+}
