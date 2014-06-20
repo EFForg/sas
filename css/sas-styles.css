@@ -365,7 +365,6 @@ ul.menu li {
   padding: 10px;
   z-index: 400;
   background-color: white;
-  overflow: hidden;
   margin-top: 20px;
 }
 #letter-signup-form h3 {
@@ -387,15 +386,13 @@ ul.menu li {
 }
 .letter-recipient-headshot {
   position: absolute;
-  top: -155px;
-  left: 10px;
+  top: -154px;
+  left: 0px;
+  display: none;
 }
 
 #recent-signatories {
   padding: 10px;
-  width: 250px;
-  position: relative;
-  top: 130px;
   background-color: white;
 }
 
@@ -462,6 +459,11 @@ ul.menu li {
     left: -35px;
     top: 139px;
   }
+  #recent-signatories  {
+    position: relative;
+    top: 130px;
+  }
+
 }
 
 #scorecard-box th,
@@ -478,11 +480,17 @@ ul.menu li {
 
 /* Tablets/medium size devices (between 768px and 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
-
 }
 
-/* Responsive tweaks */
+@media (min-width: 768px) {
+    .letter-recipient-headshot {
+    display: block;
+  }
+}
 /* Small devices (768px and smaller) */
 @media (max-width: 768px) {
-  
+  #letter-signup #letter-wrapper h2 {
+    font-size: 53px;
+    line-height: 22px;
+  }
 }
