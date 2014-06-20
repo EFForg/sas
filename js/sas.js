@@ -549,9 +549,7 @@
   var smartyURL = 'https://api.smartystreets.com/';
   
   // EFF API
-  // @todo Change to real URL @ launch
-  //var effURL = 'https://act.eff.org/petition/43/recent_signatures';
-  var effURL = 'fakeJSON';
+  var effURL = 'https://act.eff.org/petition/43/recent_signatures';
   
   // Smarty Streets API helper functions.
   function smartyGetGeo(street, zip) {
