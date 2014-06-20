@@ -609,11 +609,10 @@
     $.ajax({
       url: effURL,
       success: function (data, status, xhr) {
-        var results = JSON.parse(data);
-        for (var i in results) {
-          var fullName = '<div class="recent-sign-name">' + results[i]['first_name'] + ' ' + results[i]['last_name'] + '</div>';
-          var country = '<div class="recent-sign-country">' + results[i]['country_code'] + '</div>';
-          var time = '<div class="recent-sign-time">' + results[i]['time_ago'] + '</div>';
+        for (var i in data) {
+          var fullName = '<div class="recent-sign-name">' + data[i]['first_name'] + ' ' + data[i]['last_name'] + '</div>';
+          var country = '<div class="recent-sign-country">' + data[i]['country_code'] + '</div>';
+          var time = '<div class="recent-sign-time">' + data[i]['time_ago'] + '</div>';
           var left = '<div class="recent-sign-left">' + fullName + country + '</div>';
           var right = '<div class="recent-sign-right">' + time + '</div>';
           html += '<div class="recent-sign-item">' + left + right + '</div>';
