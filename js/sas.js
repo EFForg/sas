@@ -739,7 +739,6 @@
     var spinner = new Spinner(opts).spin(target);
   }
 
-  // @todo Switch THANKYOU to use this.
   function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&\/#]*)"),
