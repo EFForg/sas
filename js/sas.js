@@ -1179,9 +1179,9 @@ var reps = {
   }
   function sasGetScore(repCode) {
     score = reps[repCode][12];
-    var grade = 'Z'; // @todo Add real grading methodology.
+    var grade = '';
     
-    if (score == 4) {
+    if (score >= 4) {
       grade = 'A';
     }
     else if (score == 3.5){
