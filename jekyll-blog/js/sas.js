@@ -571,11 +571,11 @@
   }
   // @todo Support privacy policy.
   var partnerFilter = {
-    'gp': 'Green Peace',
-    'fftf': 'Fight for the Future',
-    'fp': 'Free Press',
-    'an': 'Access Now',
-    'sf': 'Sunlight Foundation',
+    'gp': ['Green Peace', 'FAKE_PRIVACY_POLICY_LINK'],
+    'fftf': ['Fight for the Future', 'FAKE_PRIVACY_POLICY_LINK'],
+    'fp': ['Free Press', 'FAKE_PRIVACY_POLICY_LINK'],
+    'an': ['Access Now', 'FAKE_PRIVACY_POLICY_LINK'],
+    'sf': ['Sunlight Foundation', 'FAKE_PRIVACY_POLICY_LINK']
   }
   
   // Sunlight API
@@ -788,11 +788,12 @@
     // Default to Green Peace
     var partner = 'Green Peace';
     var pCode = getParameterByName('r');
-    if (partnerFilter[pCode]) {
-      partner = partnerFilter[pCode];
+    if (partnerFilter[pCode][0]) {
+      partner = partnerFilter[pCode][0];
     }
     $('#partner-newsletter-checkbox').val(pCode);
     $('#partner-newsletter-text').text(partner);
+    $('#partner-privacy-policy').html('<a href="' + partnerFilter[pCode][1] + '">Privacy Policy</a>');
   }
   
   function addTwitterWindowEvent() {
