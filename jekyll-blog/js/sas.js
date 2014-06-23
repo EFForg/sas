@@ -569,7 +569,7 @@
     "W000795":[ "CongJoeWilson"],
     "W000810":[ "votewoodall"],
   }
-  
+  // @todo Support privacy policy.
   var partnerFilter = {
     'gp': 'Green Peace',
     'fftf': 'Fight for the Future',
@@ -579,7 +579,7 @@
   }
   
   // Sunlight API
-  var sunlightKey = 'f35f11a42f3f4f89b043c0e7b091f0d7';
+  var sunlightKey = '3d4faf1bbaf64fa4906c6d9f9ce8c2cc';
   var sunlightURL = 'https://congress.api.sunlightfoundation.com/';
   
   // Smarty Streets API
