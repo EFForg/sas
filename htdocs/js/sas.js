@@ -1236,6 +1236,11 @@ var reps = {
   
   function sasTwitterRender(repCode) {
     var handle = reps[repCode][19];
+    if (handle == '') {
+      handle = oldReps[repCode][14];
+      // @todo Get twitter handles and do the pull request.
+      //console.log(repCode);
+    }
     var html = '';
     if (handle != '') {
       var grade = sasGetScore(repCode);
