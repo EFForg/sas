@@ -192,6 +192,10 @@ ul.menu li {
   text-align: left;
 }
 
+#lookup-submit:hover{
+  cursor: pointer;
+}
+
 #lookup-error {
   font-size: 14px;
   color: #ff0000;
