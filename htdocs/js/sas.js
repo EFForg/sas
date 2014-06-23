@@ -732,8 +732,8 @@
     if (handle != '') {
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
-      // @todo Update this w/ Sina's code.
-      html = '<a target="__blank" class="tweet-scorecard" href="https://twitter.com/share?text=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.">Tweet @' + handle + '</a>';
+      var recommendations = 'eff,sunfoundation,greenpeaceusa';
+      html = '<a data-network="twitter" target="__blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.&related=' + recommendations + '" count="0">Tweet @' + handle + '</a>';
     }
     return html;
   }
