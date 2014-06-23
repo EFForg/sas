@@ -443,12 +443,13 @@ ul.menu li {
   font-size: 18px;
 }
 
-#show-thanks {
-
+#thanks-box {
+  width: 60%;
+  margin: 0 auto;
 }
 
-#thanks-box {
-  width: 50%;
+#methodology-box {
+  width: 60%;
   margin: 0 auto;
 }
 
