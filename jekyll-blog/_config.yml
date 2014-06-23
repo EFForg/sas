@@ -2,7 +2,7 @@
 title: Stand Against Spying
 email: null@example.org
 description: ""
-baseurl: "/sas/htdocs/updates"
+baseurl: "/sas/htdocs"
 url: "http://yourdomain.com"
 
 # Build settings
