@@ -425,7 +425,6 @@ ul.menu li {
 }
 
 #scorecard {
-  padding-top: 10px;
   background: #000000;
 }
 
@@ -443,7 +442,7 @@ ul.menu li {
   font-size: 18px;
 }
 
-#thanks-box {
+#generic-box {
   width: 60%;
   margin: 0 auto;
 }
