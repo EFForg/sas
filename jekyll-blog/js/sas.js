@@ -793,7 +793,7 @@
     }
     $('#partner-newsletter-checkbox').val(pCode);
     $('#partner-newsletter-text').text(partner);
-    $('#partner-privacy-policy').html('<a href="' + partnerFilter[pCode][1] + '">Privacy Policy</a>');
+    $('#partner-privacy-policy').html('<a target="_blank" href="' + partnerFilter[pCode][1] + '">Privacy Policy</a>');
   }
   
   function addTwitterWindowEvent() {
