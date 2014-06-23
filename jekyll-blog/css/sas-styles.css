@@ -486,6 +486,25 @@ ul.menu li {
   padding-right: 24px;
 }
 
+#blog {
+  background: #000000;
+}
+
+#blog-box {
+  width: 50%;
+  background-color: white;
+  color: black;
+  padding: 1px 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  top: -10px;
+  -webkit-box-shadow: 1px 1px 25px 5px #050505;
+  box-shadow: 1px 1px 25px 5px #050505;
+  font-size: 18px;
+  min-height: 500px;
+}
+
 /* Mediums size devices and below (991px and below) */
 @media (max-width: 991px) {
 

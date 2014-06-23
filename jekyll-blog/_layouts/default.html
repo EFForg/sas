@@ -1,24 +1,43 @@
 {% assign lvl = page.url | append:'X' | split:'/' | size %}
 {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="keywords" content="@todo Need text" />
+    <meta name="description" content="@todo Need text" />
     <title>Stand Against Spying</title>
+    
+    <meta property="og:title" content="@todo Need text"/>
+    <meta property="og:description" content="@todo Need text"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://standagainstspying.??? @todo What TLD?"/>
+    <meta property="og:image" content="@todo What image do we use?"/>
+    <meta property="og:site_name" content="StandAgainstSpying.??? @todo What TLD?"/>
+    <meta property="fb:admins" content="@todo What value?"/>
+ 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@todo Need text">
+    <meta name="twitter:description" content="@todo Need text">
+    <meta name="twitter:image" content="@todo Which image did we decide on?">
      
     <!-- CSS Links -->
-    <link rel="stylesheet" href="{{ relative }}lib/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="{{ relative }}css/sas-styles.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="{{ relative }}css/sas-header.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="{{ relative }}css/blog-styles" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{relative}}lib/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{relative}}css/sas-styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{relative}}css/sas-header.css" type="text/css" media="screen" />
      
     <!-- Scripts Here --> 
-    <script src="{{ relative }}lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="{{ relative }}lib/spin/spin.min.js" type="text/javascript"></script>
-    <script src="{{ relative }}js/eye-blink.js" type="text/javascript"></script>
+    <script src="{{relative}}lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="{{relative}}lib/spin/spin.min.js" type="text/javascript"></script>
+    <script src="{{relative}}js/eye-blink.js" type="text/javascript"></script>
+    <script src="{{relative}}js/sas.js" type="text/javascript"></script>
+    {% if page.url == '/rep-list/index.html' %}
+    <script src="{{relative}}js/rep-list.js" type="text/javascript"></script>      
+    {% endif %}
+    {% if page.url == '/' %}
+    <script src="{{relative}}js/index.js" type="text/javascript"></script>      
+    {% endif %}
+    
   </head>
      
     <body>
@@ -26,15 +45,15 @@
 
         <nav id="header-nav">
           <ul class="menu">
-            <li><a href="{{ relative }}about.html">About</a></li>
-            <li><a href="{{ relative }}methodology.html">Methodology</a></li>
-            <li><a href="{{ relative }}rep-list.html">Full Congressional Scorecard</a></li>
-            <li><a href="{{ relative }}index.html#letter-signup">Open Letter</a></li>
-            <li><a href="{{ relative }}updates/">Updates</a></li>
+            <li><a href="{{relative}}about">About</a></li>
+            <li><a href="{{relative}}methodology">Methodology</a></li>
+            <li><a href="{{relative}}rep-list">Full Congressional Scorecard</a></li>
+            <li><a href="{{relative}}#letter-signup">Open Letter</a></li>
+            <li><a href="{{relative}}updates">Updates</a></li>
           </ul>
         </nav>
         
-        <a href="{{ relative }}index.html" id="logo"><img src="{{ relative }}images/logo.png" /></a>
+        <a href="{{relative}}" id="logo"><img src="{{relative}}images/logo.png" /></a>
         <h1 id="header-title">Stand Against Spying</h1>
 
 <div class="eyes">
@@ -555,16 +574,9 @@
                       c10.4-6.233,20.8-9.35,31.2-9.35c5.768,0,11.852,1,18.25,3C74.492,1.968,80.141,4.551,85.075,7.751z"/>
                   </g>
                   </svg>
-  
 </span>
 </div>
       </header>
-      
-    <section id="blog">
-      <div id="blog-box">
-        {{ content }}
-      </div>
-    </section>
-
+        {{content}}
     </body>
 </html>

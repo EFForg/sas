@@ -1,12 +1,10 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
+<section id="blog">
+  <div id="blog-box">
   <h1>Updates</h1>
-
-  <ul class="posts">
+  <ul>
     {% for post in site.posts %}
       <li>
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -14,4 +12,5 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-</div>
+  </div>
+</section>
