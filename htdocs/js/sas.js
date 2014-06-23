@@ -1,6 +1,6 @@
+  // Main Data source.
   // Replace pattern ^([^,]*),(.*)$ \1 \2  
-
-var reps = {
+  var reps = {
     "A000055":[0,0,0,0,0,"0",0,0,-3,0,-0.5,-0.5,-4.0,"Rep","Robert","Aderholt","R","AL",4,"Robert_Aderholt","RobertAderholt","19787529402"  ],
     "A000360":[0,0,0,0,0,"0",0,0,0,0,0,0,0,"Sen","Lamar","Alexander","R","TN",null,"SenAlexander","lamaralexander","89927603836"  ],
     "A000367":[0,0,0,0,0,"0",3,4,0,3,0,0,10,"Rep","Justin","Amash","R","MI",3,"RepJustinAmash","repjustinamash","173604349345646"  ],
@@ -541,6 +541,8 @@ var reps = {
     "Y000065":[0,0,0,0,0,"0",3,4,0,3,0,0,10,"Rep","Ted","Yoho","R","FL",3,"RepTedYoho","RepTedYoho","563532937006022"  ],
   }
   
+  // I found some accounts which seem most likely to belong to a rep w/o any
+  // other handle. This is the fallback.
   var repTwitterBackup = {
     "A000368":[ "KellyAyotte"],
     "B001245":[ ""],
@@ -705,7 +707,6 @@ var reps = {
   }
 
   function sasRenderRep(repCode, sunlightResults) {
-    
     var html = '<div class="rep-individual col-md-4 col-lg-4">';
     html += '<div class="row">';
     html += '<img src="images/congress/' + repCode + '.jpg">';
@@ -721,6 +722,8 @@ var reps = {
   }
   
   function sasTwitterRender(repCode) {
+    // Get the twitter handle. If there's none, check repTwitterBackup to see
+    // if a dinky one exists.
     var handle = reps[repCode][19];
     if (handle == '') {
       handle = repTwitterBackup[repCode];
@@ -729,6 +732,7 @@ var reps = {
     if (handle != '') {
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
+      // @todo Update this w/ Sina's code.
       html = '<a target="__blank" class="tweet-scorecard" href="https://twitter.com/share?text=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.">Tweet @' + handle + '</a>';
     }
     return html;
