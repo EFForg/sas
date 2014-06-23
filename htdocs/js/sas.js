@@ -634,6 +634,8 @@
       $('#lookup-controls').toggle();
       $('#reps-lookup-loader').toggle();
       $('#reps-list-mine-scorecards').html(html);
+      // Add Click event after .tweet-scorecard is in the DOM.
+      addTwitterWindowEvent();
       $('#reps-lookup').toggle();
       $('#reps-list-mine').toggle();
       
@@ -733,7 +735,7 @@
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
       var recommendations = 'eff,sunfoundation,greenpeaceusa';
-      html = '<a data-network="twitter" target="__blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.&related=' + recommendations + '" count="0">Tweet @' + handle + '</a>';
+      html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.&related=' + recommendations + '">Tweet @' + handle + '</a>';
     }
     return html;
   }
@@ -792,8 +794,16 @@
     $('#partner-newsletter-checkbox').val(pCode);
     $('#partner-newsletter-text').text(partner);
   }
+  
+  function addTwitterWindowEvent() {
+    $(".tweet-scorecard").click(function() {
+      var url = $(this).attr("href");
+      window.open(url,"Twitter","width=550,height=420");
+      return false;
+    });
+  }
 
-function escapeHtml(text) {
-  var escapedValue = $('<div/>').text(text).html();
-  return escapedValue;
-}
+  function escapeHtml(text) {
+    var escapedValue = $('<div/>').text(text).html();
+    return escapedValue;
+  }
