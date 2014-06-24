@@ -550,6 +550,23 @@ ul.menu li {
   }
 }
 
+#letter-signup-form ::-webkit-input-placeholder {
+   color: #777;
+   text-transform: none;
+}
+#letter-signup-form :-moz-placeholder { /* Firefox 18- */
+   color: #777;  
+   text-transform: none;
+}
+#letter-signup-form ::-moz-placeholder {  /* Firefox 19+ */
+   color: #777;  
+   text-transform: none;
+}
+#letter-signup-form :-ms-input-placeholder {  
+   color: #777;  
+   text-transform: none;
+}
+
 ::-webkit-input-placeholder {
    color: #fff;
    text-transform: none;
