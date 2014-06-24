@@ -467,7 +467,7 @@ ul.menu li {
 }
 
 #generic-box {
-  width: 60%;
+  width: 70%;
   background-color: white;
   color: black;
   padding: 1px 20px;
@@ -479,6 +479,46 @@ ul.menu li {
   box-shadow: 1px 1px 25px 5px #050505;
   font-size: 18px;
   min-height: 500px;
+}
+
+#generic-box table,
+#generic-box th {
+  font-family: 'open_sansregular','Helvetica',Arial,sans-serif;
+}
+
+#scorecard-table {
+  width: 100%;
+}
+
+#scorecard th,
+#scorecard td {
+  color: #000000;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+table.tablesorter thead tr .header {
+	background-image: url(../images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../images/asc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../images/desc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  background-color: #007EFF;
+}
+
+#blog {
+  background: #000000;
 }
 
 /* Large devices (large desktops, 960px and up) */
@@ -511,17 +551,6 @@ ul.menu li {
   }
 }
 
-#genric-box th,
-#generic-box td {
-  color: #000000;
-  font-size: 16px;
-  padding-right: 24px;
-}
-
-#blog {
-  background: #000000;
-}
-
 /* Mediums size devices and below (991px and below) */
 @media (max-width: 991px) {
 
@@ -529,6 +558,12 @@ ul.menu li {
 
 /* Tablets/medium size devices (between 768px and 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
+  #generic-box {
+    width: 80%;
+  }
+  #generic-box h2 {
+    font-size: 54px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -540,8 +575,20 @@ ul.menu li {
     font-size: 53px;
     line-height: 22px;
   }
+  #generic-box {
+    width: 80%;
+  }
+  #generic-box h2 {
+    font-size: 32px;
+  }
   .letter-recipient-headshot {
     display: none;
+  }
+  #scorecard th,
+  #scorecard td {
+    font-size: 12px;
+    padding-left: 0px;
+    padding-right: 16px;
   }
 }
 
