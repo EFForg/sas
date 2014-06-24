@@ -109,6 +109,37 @@ h2 {
   position: relative;
   overflow: visible;
 }
+.navbar {
+  background-color: #007EFF;
+  color: #fff;
+}
+.navbar a {
+  color: #BDDDFF;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar .navbar-toggle .icon-bar {
+background-color: #fff;
+}
+.navbar-toggle {
+  border-color: #fff;
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: none;
+    text-align: center;
+  }
+  .navbar-nav>li {
+    display: inline-block;
+    float: none;
+  }
+  .navbar-nav>li>a {
+    text-transform: uppercase;
+    letter-spacing:1px;
+  }
+}
 #header-title {
   color: #000;
   font-family: 'antoniobold';
@@ -117,6 +148,9 @@ h2 {
   text-align: center;
  /* margin-top: 322px; */
   z-index: 500;
+  margin-bottom:0;
+position: relative;
+line-height: 0.75;
 }
 #header-nav {
   margin-top: 10px;
@@ -135,7 +169,7 @@ h2 {
 #logo {
   text-align: center;
   display: block;
-  margin: 30px auto;
+  margin: 40px auto;
   width: 297px;
   height: 168px;
 }
