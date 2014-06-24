@@ -569,23 +569,7 @@
     "W000795":[ "CongJoeWilson"],
     "W000810":[ "votewoodall"],
   }
-/*
- 
-Demand Progress 
-    logo:
-    twitter: @demandprogress 
-    privacy policy: http://www.demandprogress.org/privacy/
 
-Libertarian Party
-    logo
-    twitter: @LPNational (not sure if this is correct) (it’s correct)
-    privacy policy: http://www.lp.org/privacy-policy
-
-FreedomWorks
-    logo:
-    twitter: @FWforAmerica 
-    privacy policy:http://freedomworksforamerica.org/privacy-policy
-*/
   var partnerFilter = {
     'gp': ['Green Peace', 'http://www.greenpeace.org/usa/en/about/Privacy-Policy/', 'greenpeaceusa'],
     'sf': ['Fight for the Future', 'http://sunlightfoundation.com/legal/privacy/', 'sunfoundation'],
@@ -602,7 +586,7 @@ FreedomWorks
   
   // Smarty Streets API
   var smartyAuthID = '26cbace2-b8fe-4034-9da9-9d6614ac31d3';
-  var smartyAuthToken = '435887452743487318';
+  //var smartyAuthToken = '3808417605462137740';
   var smartyURL = 'https://api.smartystreets.com/';
   
   // EFF API
@@ -613,7 +597,7 @@ FreedomWorks
     $('#lookup-controls').toggle();
     $('#reps-lookup-loader').toggle();
     sasSpinner('reps-lookup-loader');
-    var req = smartyURL + 'street-address?auth-id=' + smartyAuthID + '&auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
+    var req = smartyURL + 'street-address?auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
 	  $.ajax({
       url: 'https://api.smartystreets.com/street-address',
       dataType: 'JSONP',
