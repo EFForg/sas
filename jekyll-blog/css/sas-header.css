@@ -12,9 +12,9 @@
   -ms-transform: translateZ(0.3px) scale(0.7);
   -webkit-transform: translateZ(0.3px) scale(0.7);
   transform: translateZ(0.3px) scale(0.7); */
-  width: 98px;
-  height: 110px;
-  background: url(../images/eye-lg.png) no-repeat;
+  width: 110px;
+  height: 65px;
+  /* background: url(../images/eye-lg.png) no-repeat; */
   display: block;
   position: absolute;
   z-index: 100;
@@ -26,8 +26,8 @@
   -webkit-transform: translateZ(0.3px) scale(0.7);
   transform: translateZ(0.3px) scale(0.7); */
   width: 62px;
-  height: 74px;
-  background: url(../images/eye-md.png) no-repeat;
+  height: 36px;
+  /* background: url(../images/eye-md.png) no-repeat; */
   display: block;
   position: absolute;
   z-index: 100;
@@ -39,8 +39,8 @@
   -webkit-transform: translateZ(0.1px) scale(0.9);
   transform: translateZ(0.1px) scale(0.9); */
   width: 31px;
-  height: 38px;
-  background: url(../images/eye-sm.png) no-repeat;
+  height: 19px;
+  /* background: url(../images/eye-sm.png) no-repeat; */
   display: block;
   position: absolute;
   z-index: 100;
