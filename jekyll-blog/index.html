@@ -17,7 +17,9 @@ permalink: /
             <input id="lookup-zip" class="text" type="text" placeholder="Enter Zip Code" />
           </div>
           <div id="lookup-controls" class="clearfix">
-            <span id="lookup-submit" class="submit">Lookup</span> <a id="no-zipcode-btn" href="#letter-signup">No zip code? Sign the open letter below.</a>
+            <span id="lookup-submit" class="submit">Lookup</span>
+            <span id="lookup-privacy">This tool uses Sunlight Labs and Smarty Streets' APIs (why?).</span>
+            <a id="no-zipcode-btn" href="#letter-signup">No zip code? Sign the open letter below.</a>
           </div>
           <div id="reps-lookup-loader"></div>
         </form>
@@ -57,7 +59,7 @@ permalink: /
             </div>
           </div>
           <!-- Letter signup goes here. -->
-          <div id="letter-aside" class="col-sm-4 col-md-4 col-lg-4">
+          <div id="letter-aside" class="col-sm-3 col-md-3 col-lg-3">
             <div id="letter-signup-form">
               <h3>Sign the open letter</h3>
               <img class="letter-recipient-headshot" src="images/letter-signup-obama.png" alt="Photo of Barack Obama"/>
@@ -341,7 +343,7 @@ permalink: /
                 <div class="clearfix">Stay informed on this and other campaigns!  Sign up for email updates from:</div>
                 <div class="checkbox clearfix">
                   <input name="subscribe" value="true" type="checkbox" />EFF
-                  <div id="eff-privacy-policy"><a href="@todo" target="_blank">Privacy Policy @todo add link</a></div>
+                  <div id="eff-privacy-policy"><a href="https://www.eff.org/policy " target="_blank">Privacy Policy</a></div>
                 </div>
                 <div class="checkbox clearfix">
                   <input id="partner-newsletter-checkbox" name="partner_newsletter" value="gp" type="checkbox" />

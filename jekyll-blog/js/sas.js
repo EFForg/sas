@@ -569,13 +569,31 @@
     "W000795":[ "CongJoeWilson"],
     "W000810":[ "votewoodall"],
   }
-  // @todo Support privacy policy.
+/*
+ 
+Demand Progress 
+    logo:
+    twitter: @demandprogress 
+    privacy policy: http://www.demandprogress.org/privacy/
+
+Libertarian Party
+    logo
+    twitter: @LPNational (not sure if this is correct) (it’s correct)
+    privacy policy: http://www.lp.org/privacy-policy
+
+FreedomWorks
+    logo:
+    twitter: @FWforAmerica 
+    privacy policy:http://freedomworksforamerica.org/privacy-policy
+*/
   var partnerFilter = {
-    'gp': ['Green Peace', 'FAKE_PRIVACY_POLICY_LINK'],
-    'fftf': ['Fight for the Future', 'FAKE_PRIVACY_POLICY_LINK'],
-    'fp': ['Free Press', 'FAKE_PRIVACY_POLICY_LINK'],
-    'an': ['Access Now', 'FAKE_PRIVACY_POLICY_LINK'],
-    'sf': ['Sunlight Foundation', 'FAKE_PRIVACY_POLICY_LINK']
+    'gp': ['Green Peace', 'http://www.greenpeace.org/usa/en/about/Privacy-Policy/', 'greenpeaceusa'],
+    'sf': ['Fight for the Future', 'http://sunlightfoundation.com/legal/privacy/', 'sunfoundation'],
+    'fp': ['Free Press Action Fund', 'http://www.freepress.net/privacy-copyright', 'freepress'],
+    'fftf': ['Sunlight Foundation', 'http://www.fightforthefuture.org/privacy/', 'fightfortheftr'],
+    'dp': ['Demand Progress', 'http://www.demandprogress.org/privacy/', 'demandprogress'],
+    'lp': ['Libertarian Party', 'http://www.lp.org/privacy-policy', 'lpnational'],
+    'fw': ['FreedomWorks', 'http://freedomworksforamerica.org/privacy-policy', 'fwforamerica'],
   }
   
   // Sunlight API
@@ -734,7 +752,7 @@
     if (handle != '') {
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
-      var recommendations = 'eff,sunfoundation,greenpeaceusa';
+      var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica';
       html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.&related=' + recommendations + '">Tweet @' + handle + '</a>';
     }
     return html;
