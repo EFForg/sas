@@ -471,20 +471,6 @@ ul.menu li {
   background: #000000;
 }
 
-#scorecard-box {
-  width: 50%;
-  background-color: white;
-  color: black;
-  padding: 1px 20px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 100;
-  top: -10px;
-  -webkit-box-shadow: 1px 1px 25px 5px #050505;
-  box-shadow: 1px 1px 25px 5px #050505;
-  font-size: 18px;
-}
-
 #generic-box {
   width: 60%;
   background-color: white;
@@ -530,8 +516,8 @@ ul.menu li {
   }
 }
 
-#scorecard-box th,
-#scorecard-box td {
+#genric-box th,
+#generic-box td {
   color: #000000;
   font-size: 16px;
   padding-right: 24px;
