@@ -350,9 +350,21 @@ ul.menu li {
  * @todo: Can this be targeted more effectively? Doesn't seem to introduce
  * other bugs.
 */
-.container.row:after,
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
 .modal-footer:after {
-  clear: none; 
+  clear: none;
 }
 
 #letter-signup-outside-us {
