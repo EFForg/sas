@@ -26,7 +26,10 @@ $(document).ready(function() {
   var thanks = getParameterByName('thankyou');
   if (thanks == 1) {
     $('#show-thanks').toggle();
-    window.location.hash = '#show-thanks';
+    //window.location.hash = '#show-thanks';
+    var url = removeURLParameter(location.href, 'thankyou');
+    url += '#show-thanks';
+    location.href = url;
   }
   
   effRecentSigners();
