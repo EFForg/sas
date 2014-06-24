@@ -167,7 +167,12 @@ ul.menu li {
   background-color: black;
   color: white;
   padding-bottom: 10px;
+  background-color: #000;
   background: url(../images/downloads-bg.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   min-height: 500px;
   padding-top:20px;
 }
@@ -590,6 +595,23 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     padding-left: 0px;
     padding-right: 16px;
   }
+}
+
+#letter-signup-form ::-webkit-input-placeholder {
+   color: #777;
+   text-transform: none;
+}
+#letter-signup-form :-moz-placeholder { /* Firefox 18- */
+   color: #777;  
+   text-transform: none;
+}
+#letter-signup-form ::-moz-placeholder {  /* Firefox 19+ */
+   color: #777;  
+   text-transform: none;
+}
+#letter-signup-form :-ms-input-placeholder {  
+   color: #777;  
+   text-transform: none;
 }
 
 ::-webkit-input-placeholder {
