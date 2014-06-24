@@ -158,7 +158,10 @@ ul.menu li {
 /* Sections */
 
 #show-thanks {
+  padding-top: 40px;
   display: none;
+  width: 60%;
+  margin: auto;
 }
 
 #reps-lookup,
