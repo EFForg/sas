@@ -29,4 +29,6 @@ $(document).ready(function() {
   }
   effRecentSigners();
   effSignupParter();
+  $('.privacy-notice-popover').popover();
+
 });
