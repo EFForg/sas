@@ -529,6 +529,23 @@ ul.menu li {
   min-height: 500px;
 }
 
+#informational-box {
+  width: 540px;
+  background-color: white;
+  color: black;
+  padding: 1px 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#informational-box a {
+  text-decoration: underline;
+}
+
 #generic-box table,
 #generic-box th {
   font-family: 'open_sansregular','Helvetica',Arial,sans-serif;
