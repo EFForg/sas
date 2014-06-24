@@ -25,11 +25,13 @@ $(document).ready(function() {
   // Check for "Thank You" response from action center;
   var thanks = getParameterByName('thankyou');
   if (thanks == 1) {
-    $('#show-thanks').toggle();
-    //window.location.hash = '#show-thanks';
+    // Remove ?thankyou=1, set hash to #show-thanks and redirect.
     var url = removeURLParameter(location.href, 'thankyou');
     url += '#show-thanks';
     location.href = url;
+  }
+  if (location.hash == '#show-thanks') {
+    $('#show-thanks').toggle();
   }
   
   effRecentSigners();
