@@ -227,6 +227,7 @@ svg .eyelid {
 @media (max-width: 700px) {
   #header-title {
     font-size: 58px;
+    line-height: 1.2
   }
   #reps-lookup-box {
     top: 0;

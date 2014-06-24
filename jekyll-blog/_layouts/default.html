@@ -28,6 +28,7 @@
      
     <!-- Scripts Here --> 
     <script src="{{relative}}lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="{{relative}}lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="{{relative}}lib/spin/spin.min.js" type="text/javascript"></script>
     <script src="{{relative}}js/eye-blink.js" type="text/javascript"></script>
     <script src="{{relative}}js/sas.js" type="text/javascript"></script>
@@ -124,8 +125,19 @@
       <header id="header">
 
 
-        <nav id="header-nav">
-          <ul class="menu">
+    <!-- Static navbar -->
+    <div class="navbar navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav ">
             <li><a href="{{relative}}">Home</a></li>
             <li><a href="{{relative}}about">About</a></li>
             <li><a href="{{relative}}methodology">Methodology</a></li>
@@ -133,7 +145,9 @@
             <li><a href="{{relative}}#letter-signup">Open Letter</a></li>
             <li><a href="{{relative}}updates">Updates</a></li>
           </ul>
-        </nav>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
         
         <a href="{{relative}}" id="logo"><img src="{{relative}}images/logo.png" /></a>
         <h1 id="header-title">Stand Against Spying</h1>
