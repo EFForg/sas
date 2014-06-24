@@ -107,7 +107,6 @@ h2 {
   padding: 1px;
   margin: auto;
   position: relative;
-  height: 449px;;
   overflow: visible;
 }
 #header-title {
@@ -116,14 +115,10 @@ h2 {
   font-size: 120px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 334px;
+ /* margin-top: 322px; */
   z-index: 500;
 }
 #header-nav {
-  background-color: #007EFF;
-  position: absolute;
-  top: 10px;
-  left: 0;
   width: 100%;
   z-index: 200;
 }
@@ -141,7 +136,9 @@ h2 {
 #logo {
   text-align: center;
   display: block;
-  margin-top: 70px;
+  margin: 30px auto;
+  width: 297px;
+  height: 168px;
 }
 #logo img {
   display: inline;
