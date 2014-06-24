@@ -653,7 +653,6 @@
       url: effURL,
       success: function (data, status, xhr) {
         var sigsTotal = data.signatures_total;
-        alert(sigsTotal);
         for (var i in data.signatories) {
           var fullName = '<div class="recent-sign-name">' + escapeHtml(data.signatories[i]['first_name']) + ' ' + escapeHtml(data.signatories[i]['last_name']) + '</div>';
           var country = '<div class="recent-sign-country">' + escapeHtml(data.signatories[i]['country_code']) + '</div>';
