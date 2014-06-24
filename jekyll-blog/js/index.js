@@ -25,15 +25,8 @@ $(document).ready(function() {
   // Check for "Thank You" response from action center;
   var thanks = getParameterByName('thankyou');
   if (thanks == 1) {
-    // Remove ?thankyou=1, set hash to #show-thanks and redirect.
-    var url = removeURLParameter(location.href, 'thankyou');
-    url += '#show-thanks';
-    location.href = url;
+    location.href = 'thanks/';
   }
-  if (location.hash == '#show-thanks') {
-    $('#show-thanks').toggle();
-  }
-  
   effRecentSigners();
   effSignupParter();
 });
