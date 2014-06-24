@@ -203,6 +203,14 @@ ul.menu li {
   line-height:1.3;
 }
 
+#lookup-privacy {
+  display: block;
+  font-size: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
 #lookup-submit {
   letter-spacing: 3px;
 }
