@@ -454,7 +454,9 @@ ul.menu li {
   padding-top: 3px;
 }
 
+
 #about,
+#blog,
 #methodology,
 #scorecard {
   background: #000000;
@@ -475,7 +477,7 @@ ul.menu li {
 }
 
 #generic-box {
-  width: 50%;
+  width: 60%;
   background-color: white;
   color: black;
   padding: 1px 20px;
@@ -486,11 +488,7 @@ ul.menu li {
   -webkit-box-shadow: 1px 1px 25px 5px #050505;
   box-shadow: 1px 1px 25px 5px #050505;
   font-size: 18px;
-}
-
-#methodology-box {
-  width: 60%;
-  margin: 0 auto;
+  min-height: 500px;
 }
 
 /* Large devices (large desktops, 960px and up) */
@@ -532,21 +530,6 @@ ul.menu li {
 
 #blog {
   background: #000000;
-}
-
-#blog-box {
-  width: 50%;
-  background-color: white;
-  color: black;
-  padding: 1px 20px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 100;
-  top: -10px;
-  -webkit-box-shadow: 1px 1px 25px 5px #050505;
-  box-shadow: 1px 1px 25px 5px #050505;
-  font-size: 18px;
-  min-height: 500px;
 }
 
 /* Mediums size devices and below (991px and below) */
