@@ -198,6 +198,10 @@ ul.menu li {
   line-height:1.3;
 }
 
+#lookup-submit {
+  letter-spacing: 3px;
+}
+
 #lookup-submit:hover{
   cursor: pointer;
 }
