@@ -788,7 +788,6 @@
     // Default to Green Peace
     var partner = 'Green Peace';
     var pCode = getParameterByName('r');
-    alert(pCode);
     if (pCode == '') {
       pCode = 'gp';
     }
