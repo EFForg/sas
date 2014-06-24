@@ -788,7 +788,11 @@
     // Default to Green Peace
     var partner = 'Green Peace';
     var pCode = getParameterByName('r');
-    if (partnerFilter[pCode][0]) {
+    alert(pCode);
+    if (pCode == '') {
+      pCode = 'gp';
+    }
+    if (partnerFilter[pCode]) {
       partner = partnerFilter[pCode][0];
     }
     $('#partner-newsletter-checkbox').val(pCode);
