@@ -318,7 +318,7 @@ ul.menu li {
 }
 #reps-lookup-loader {
   height: 77px;
-  display: none;  
+  display: none;
 }
 
 #no-zipcode-btn {
@@ -350,7 +350,7 @@ ul.menu li {
 .rep-individual img {
   border-top: black solid 1px;
   border-left: black solid 1px;
-  border-bottom: black solid 1px;  
+  border-bottom: black solid 1px;
 }
 .rep-individual .grade {
   background-color: #007EFF;
@@ -379,7 +379,7 @@ ul.menu li {
   border: black solid 1px;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
-  border-radius: 15px;  
+  border-radius: 15px;
 }
 .rep-individual:hover .tweet-scorecard {
   border: white solid 1px;
@@ -399,7 +399,7 @@ ul.menu li {
 .rep-individual:hover img {
   border-top: white solid 1px;
   border-left: white solid 1px;
-  border-bottom: white solid 1px;  
+  border-bottom: white solid 1px;
 }
 #reps-list-mine-footer {
   text-align: center;
@@ -635,7 +635,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 }
 
 @media (min-width: 768px) {
-  
+
 }
 /* Small devices (768px and smaller) */
 @media (max-width: 768px) {
@@ -693,15 +693,15 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
    text-transform: none;
 }
 #letter-signup-form :-moz-placeholder { /* Firefox 18- */
-   color: #777;  
+   color: #777;
    text-transform: none;
 }
 #letter-signup-form ::-moz-placeholder {  /* Firefox 19+ */
-   color: #777;  
+   color: #777;
    text-transform: none;
 }
-#letter-signup-form :-ms-input-placeholder {  
-   color: #777;  
+#letter-signup-form :-ms-input-placeholder {
+   color: #777;
    text-transform: none;
 }
 
@@ -710,14 +710,89 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
    text-transform: none;
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
+   color: #fff;
    text-transform: none;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
+   color: #fff;
    text-transform: none;
 }
-:-ms-input-placeholder {  
-   color: #fff;  
+:-ms-input-placeholder {
+   color: #fff;
    text-transform: none;
+}
+
+/* ############## Social buttons */
+.share-buttons {
+  width: 172px;
+  margin: auto;
+  padding-top: 40px;
+}
+.sicon {
+        float: left;
+        width:54px;
+        height:54px;
+        background-color:black;
+        background-image: url("../images/social-icons.png");
+}
+.share-buttons .sicon {
+        margin-top: 2px;
+}
+#sfb {
+        background-position:70% 0 ;
+}
+
+#sfb:hover {
+        opacity:0.8;
+}
+
+#stwit {
+        background-position:50% 0 ;
+}
+
+#stwit:hover {
+        opacity:0.8;
+}
+
+#sgplus{
+        background-position:20% 0 ;
+}
+#sgplus:hover{
+        opacity:0.8;
+}
+
+.social-count {
+        display: inline-block;
+        position: relative;
+}
+
+.social-count:after {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        top: -34px;
+        color: #444;
+        content: attr(count);
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+        display: block;
+        left: 0px;
+        width: 54px;
+        padding: 5px;
+        text-align: center;
+        position: absolute;
+        text-shadow: 0 1px 0 #000;
+        white-space: nowrap;
+}
+
+.social-count:before {
+        border: solid;
+        border: 1px solid #ccc;
+        border-color: #ccc transparent;
+        border-width: .4em .4em 0 .4em;
+        top: -4px;
+        content: "";
+        display: block;
+        left: 22px;
+        position: absolute;
 }
