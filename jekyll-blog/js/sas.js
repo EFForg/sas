@@ -585,8 +585,7 @@
   var sunlightURL = 'https://congress.api.sunlightfoundation.com/';
   
   // Smarty Streets API
-  var smartyAuthID = '26cbace2-b8fe-4034-9da9-9d6614ac31d3';
-  //var smartyAuthToken = '3808417605462137740';
+  var smartyAuthToken = '3808417605462137740';
   var smartyURL = 'https://api.smartystreets.com/';
   
   // EFF API
