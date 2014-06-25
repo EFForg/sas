@@ -39,7 +39,9 @@ $(document).ready(function() {
   if (thanks == 1) {
     location.href = 'thanks/';
   }
-  effRecentSigners();
+    setInterval(function() {
+      effRecentSigners();
+    }, 10000);
   effSignupParter();
   $('.privacy-notice-popover').popover();
   /* ==========================================================================

@@ -39,8 +39,16 @@ $(document).ready(function() {
   if (thanks == 1) {
     location.href = 'thanks/';
   }
+  
+  // Get recent signers initially and then every 10 seconds.
   effRecentSigners();
+  setInterval(function() {
+    effRecentSigners();
+  }, 10000);
+  
+  // Determine if there's a signup partner and mess with dom.
   effSignupParter();
+  
   $('.privacy-notice-popover').popover();
   /* ==========================================================================
      Social counts
