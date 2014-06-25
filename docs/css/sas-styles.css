@@ -368,6 +368,7 @@ ul.menu li {
   text-align: center;
   margin: 10px 0 15px;
 }
+
 .rep-individual .tweet-scorecard {
   color: black;
   padding: 2px 15px 2px 35px;
@@ -377,6 +378,11 @@ ul.menu li {
   -moz-border-radius: 13px;
   border-radius: 15px;
 }
+
+.rep-individual .grade {
+  color: #ffffff;
+}
+
 .rep-individual:hover .tweet-scorecard {
   border: white solid 1px;
   color: white;
