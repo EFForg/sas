@@ -45,7 +45,7 @@ $(document).ready(function() {
   /* ==========================================================================
      Social counts
      ==========================================================================*/
-  var shareUrl = window.location.href;
+  var shareUrl = 'https://standagainstspying.org' || window.location.href;
   $.ajax('https://act.eff.org/tools/social_buttons_count/?networks=facebook,twitter,googleplus&url=' + shareUrl, {
       success: function(res, err) {
           $.each(res, function(network, value) {
@@ -57,6 +57,27 @@ $(document).ready(function() {
           })
       }
   });
+
+  /* ==========================================================================
+     Sharing buttons
+     ==========================================================================*/
+
+  $( ".fblinkthis" ).click(function() {
+      var url = $(this).attr("href");
+      window.open(url, "Share on Facebook", "width=650,height=500");
+      return false;
+  })
+  $( ".twlinkthis" ).click(function() {
+      var url = $(this).attr("href");
+      window.open(url,"Twitter","width=550,height=420");
+      return false;
+  })
+  $( ".gpluslinkthis" ).click(function() {
+      var url = $(this).attr("href");
+      window.open(url,"Share on Google Plus","width=500,height=436");
+      return false;
+  })
+
   addTwitterWindowEvent();
 
 });
