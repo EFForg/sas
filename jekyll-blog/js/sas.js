@@ -697,8 +697,13 @@
     else if (score <= .5){
       grade = 'F';
     }
+    // Check for Senators w/ score of 0. @todo Architect better later
+    if ((score == 0) && reps[repCode][9] == "Sen") {
+      grade = '?';
+    }
     return grade;
   }
+  
   function sasGetTweet(repCode) {
     score = reps[repCode][8];
     var handle = reps[repCode][15];
@@ -709,7 +714,8 @@
     else if (score <= 2.5){
       message = 'Dear @' + handle + ': Your record on NSA reform is bad, but there’s still time. Stand against mass spying today.';
     }
-    else {
+    // Check for Senators w/ score of 0. @todo Architect better later
+    if ((score == 0) && reps[repCode][9] == "Sen") {
       message = 'There are no civilians in the fight against mass spying, @' + handle + '. Take a stand against NSA spying.';
     }
     message += ' https://eff.org/score';
