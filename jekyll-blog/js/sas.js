@@ -578,6 +578,7 @@
     'dp': ['Demand Progress', 'http://www.demandprogress.org/privacy/', 'demandprogress'],
     'lp': ['Libertarian Party', 'http://www.lp.org/privacy-policy', 'lpnational'],
     'fw': ['FreedomWorks', 'http://freedomworksforamerica.org/privacy-policy', 'fwforamerica'],
+    'tf': ['TechFreedom', 'http://techfreedom.org/privacypolicy', 'techfreedom'],
   }
   
   // Sunlight API
@@ -758,7 +759,7 @@
     if (handle != '') {
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
-      var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica';
+      var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
       var message = '';
       html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
     }
