@@ -18,11 +18,11 @@ permalink: /
           </div>
           <div id="lookup-controls" class="clearfix">
             <a id="lookup-submit-anchor" href="#rep-list-mine"><span id="lookup-submit" class="submit">Lookup</span></a>
+            <a id="no-zipcode-btn" href="#letter-signup">No zip code? Sign the open letter below.</a>
             <span id="lookup-privacy">
               This tool uses <a href="http://sunlightfoundation.com/legal/privacy/">Sunlight Labs</a> and <a href="http://smartystreets.com/legal/privacy-policy">Smarty Streets</a> APIs
               <a class="privacy-notice-popover" data-content="<p>Our Tweet at Congress tool uses Smarty Streets API to look up your geolocation (longitude and latitude) which we then use to look up your Congressional district using the Sunlight Foundation API.</p>" data-placement="auto bottom" data-trigger="hover" data-html="true" data-title="Tweet at Congress Tool" data-toggle="popover" data-container="body" href="#" data-original-title="" title="">(why?)</a>
             </span>
-            <a id="no-zipcode-btn" href="#letter-signup">No zip code? Sign the open letter below.</a>
           </div>
           <div id="reps-lookup-loader"></div>
         </form>
@@ -65,7 +65,7 @@ permalink: /
     </section>
     <section id="letter-signup">
       <div class="container">
-          <div id="letter-wrapper" class="col-sm-8 col-md-8 col-lg-8">
+          <div id="letter-wrapper" class="col-sm-7 col-md-8 col-lg-8">
             <h2>Dear Mr. President:</h2>
             <div id="letter-text">
               <p>As citizens of the Internet, we believe that mass surveillance by the NSA and its global partners infringes on our civil liberties, runs contrary to democratic principles, and chills free expression. </p>
@@ -74,10 +74,12 @@ permalink: /
               <p>We recognize that Congress has an important role to play in passing legislation to ensure no future programs of mass surveillance can exist. However, you are not obligated to wait for Congress to act. We urge you to use your executive powers to end mass surveillance immediately and embrace new levels of transparency around America's spying apparatus. Only through transparency can real reform be enacted.</p>
               <p>Surveillance should be targeted. It should be only what is necessary and proportionate to the alleged crime. Surveillance should be authorized by an independent court with access to a full, factual record, facing the potential for scrutiny by a public advocate. Above all, it must not sweep in the records of hundreds of millions of people with little discernment.</p>
               <p>Once you have reined in the NSA spying programs, join us in asking Congress to enact reform to ensure these programs are permanently outlawed. </p>
+              <p>Sincerely,</p>
+              <p><i>Your name here</i></p>
             </div>
           </div>
           <!-- Letter signup goes here. -->
-          <div id="letter-aside" class="col-sm-4 col-md-4 col-lg-3">
+          <div id="letter-aside" class="col-sm-5 col-md-4 col-lg-4">
             <div id="letter-signup-form">
               <h3>Sign the open letter</h3>
               <img class="letter-recipient-headshot" src="images/letter-signup-obama.png" alt="Photo of Barack Obama"/>
@@ -361,12 +363,12 @@ permalink: /
                 <div class="clearfix">Stay informed on this and other campaigns!  Sign up for email updates from:</div>
                 <div class="checkbox clearfix">
                   <input name="subscribe" value="true" type="checkbox" />EFF
-                  <div id="eff-privacy-policy"><a href="https://www.eff.org/policy " target="_blank">Privacy Policy</a></div>
+                  <span id="eff-privacy-policy"><a href="https://www.eff.org/policy " target="_blank">Privacy Policy</a></span>
                 </div>
                 <div class="checkbox clearfix">
                   <input id="partner-newsletter-checkbox" name="partner_newsletter" value="gp" type="checkbox" />
-                  <div id="partner-newsletter-text">Green Peace</div>
-                  <div id="partner-privacy-policy"></div>
+                  <span id="partner-newsletter-text">Green Peace</span>
+                  <span id="partner-privacy-policy"></span>
                 </div>
                 <div class="clearfix">
                   <input id="letter-submit" name="letter-submit" type="submit" value="Speak Out" />

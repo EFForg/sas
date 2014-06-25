@@ -741,14 +741,14 @@
     html += '</div>';
     html += '<div class="row">';
     html += '<h3>' + sasGetFullName(repCode) + '</h3>';
-    html += sasTwitterRender(repCode);
+    html += sasTwitterRenderRep(repCode);
     html += '</div>';
     html += '</div>';
     
     return html;
   }
   
-  function sasTwitterRender(repCode) {
+  function sasTwitterRenderRep(repCode) {
     // Get the twitter handle. If there's none, check repTwitterBackup to see
     // if a dinky one exists.
     var handle = reps[repCode][15];
@@ -760,9 +760,16 @@
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
       var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
-      var message = '';
       html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
     }
+    return html;
+  }
+  
+  function sasTwitterRenderSite() {
+    // @todo Sitewide tweet here?
+    //var status = 
+    var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
+    html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
     return html;
   }
   
@@ -774,7 +781,7 @@
       html +=   '<td>' + sasGetScore(i) + '</td>';
       html +=   '<td>' + reps[i][12] + '</td>';
       html +=   '<td>' + reps[i][13] + '</td>';
-      html +=   '<td>' + sasTwitterRender(i) + '</td>';
+      html +=   '<td>' + sasTwitterRenderRep(i) + '</td>';
       html += '</tr>';
     }
     return html;
@@ -826,7 +833,7 @@
   }
   
   function addTwitterWindowEvent() {
-    $(".tweet-scorecard").click(function() {
+    $(".tweet-scorecard, .tweet-thanks").click(function() {
       var url = $(this).attr("href");
       window.open(url,"Twitter","width=550,height=420");
       return false;

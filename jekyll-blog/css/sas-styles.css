@@ -258,10 +258,6 @@ ul.menu li {
   padding-bottom: 10px;
 }
 
-#lookup-privacy a {
-  color: #ff0000;
-}
-
 #lookup-submit {
   letter-spacing: 3px;
 }
@@ -307,7 +303,7 @@ ul.menu li {
   display: block;
   font-size: 20px;
   text-transform: uppercase;
-  padding: 5px 15px;
+  padding: 7px 15px 5px;
 }
 
 #letter-submit .checkbox {
@@ -413,11 +409,13 @@ ul.menu li {
   margin-bottom: 60px;
 }
 
-#letter-signup-outside-us {
-  color: #ff0000;
-  font-size: 12px;
+#letter-signup-outside-us,
+#eff-privacy-policy,
+#partner-privacy-policy {
+  font-size: 11px;
   margin-left: 5px;
   cursor: pointer;
+  color: #007EFF;
 }
 
 #letter-signup-outside-us:hover {
@@ -436,7 +434,7 @@ ul.menu li {
   font-size: 16px;
 }
 #letter-text p:first-child {
-  font-size: 18px;
+  font-size: 24px;
 }
 #letter-text li p:first-child {
   font-size: 16px;
@@ -627,10 +625,11 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
   #letter-signup #letter-wrapper h2 {
     line-height: 21px;
+    font-size: 45px;
   }
   #letter-aside {
     position: relative;
-    left: -32px;
+    left: -31px;
   }
 }
 

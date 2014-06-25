@@ -60,4 +60,6 @@ $(document).ready(function() {
       cache         : true,
       jsonpCallback : 'myCallback'
   });
+  addTwitterWindowEvent();
+
 });
