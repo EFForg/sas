@@ -1,5 +1,11 @@
 var scorecardTextExtraction = function(node) {
-  return (node.childNodes.length > 1) ? node.childNodes[1].innerHTML : node.innerHTML;
+  if (node.childNodes.length > 1) {
+    return node.childNodes[1].innerHTML;
+  }
+  if (node.innerHTML == '?') {
+    return 'G';
+  }
+  return node.innerHTML;
 }
 
 $(document).ready(function() {
