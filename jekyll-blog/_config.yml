@@ -1,9 +1,10 @@
 # Site settings
 title: Stand Against Spying
-email: null@example.org
+email: webmaster@eff.org
 description: ""
-baseurl: "/sas/htdocs"
-url: "http://yourdomain.com"
+baseurl: "/"
+url: "https://standagainstspying.org"
+destination: "../docs"
 
 # Build settings
 markdown: kramdown
