@@ -258,10 +258,6 @@ ul.menu li {
   padding-bottom: 10px;
 }
 
-#lookup-privacy a {
-  color: #ff0000;
-}
-
 #lookup-submit {
   letter-spacing: 3px;
 }
@@ -413,11 +409,13 @@ ul.menu li {
   margin-bottom: 60px;
 }
 
-#letter-signup-outside-us {
-  color: #ff0000;
-  font-size: 12px;
+#letter-signup-outside-us,
+#eff-privacy-policy,
+#partner-privacy-policy {
+  font-size: 11px;
   margin-left: 5px;
   cursor: pointer;
+  color: #007EFF;
 }
 
 #letter-signup-outside-us:hover {
