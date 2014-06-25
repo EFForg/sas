@@ -1,6 +1,6 @@
 $(document).ready(function() {  
-  // On Click, lookup address.
-  $('#lookup-submit').click(function() {
+  
+  function repLookup() {
     var street = $('#lookup-street').val();
     var zip = $('#lookup-zip').val();
     if ((street.trim() != '') && (zip.trim() != '')) {
@@ -9,6 +9,17 @@ $(document).ready(function() {
     }
     else {
       $('#lookup-error').html('Please enter a street address and zip code.')
+    }
+  }
+  
+  // On Click, lookup address.
+  $('#lookup-submit').click(function() {
+    repLookup();
+  });
+  
+  $("#lookup-street, #lookup-zip").keyup(function (e) {
+    if (e.keyCode == 13) {
+      repLookup();
     }
   });
   
