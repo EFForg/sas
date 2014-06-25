@@ -1,5 +1,5 @@
 var scorecardTextExtraction = function(node) {
-  return node.childNodes[0] ? node.childNodes[0].innerHTML : node.innerHTML;
+  return (node.childNodes.length > 1) ? node.childNodes[1].innerHTML : node.innerHTML;
 }
 
 $(document).ready(function() {
