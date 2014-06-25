@@ -149,8 +149,8 @@ background-color: #fff;
  /* margin-top: 322px; */
   z-index: 500;
   margin-bottom:0;
-position: relative;
-line-height: 0.75;
+  position: relative;
+  line-height: 0.75;
 }
 #header-nav {
   margin-top: 10px;
@@ -188,6 +188,18 @@ ul.menu li {
 }
 
 /* Sections */
+
+#footer1 {
+  height: 64px;
+  width: 100%;
+}
+
+#footer1-box {
+  padding-top: 32px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
 
 #show-thanks {
   padding-top: 40px;
@@ -475,7 +487,7 @@ ul.menu li {
 
 .recent-sign-item {
   clear: both;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   font-size: 14px;
 }
 
