@@ -668,7 +668,7 @@
   
   // SAS Functions
   function sasGetFullName(repCode) {
-    return reps[repCode][9] + ". " + reps[repCode][10] + " " + reps[repCode][11] + ' (' + reps[repCode][12]+ '-' + reps[repCode][13] + ')';
+    return reps[repCode][9] + ". " + reps[repCode][10] + " <span>" + reps[repCode][11] + '</span> (' + reps[repCode][12]+ '-' + reps[repCode][13] + ')';
   }
   function sasGetScore(repCode) {
     score = reps[repCode][8];
