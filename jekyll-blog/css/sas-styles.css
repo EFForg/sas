@@ -419,8 +419,14 @@ ul.menu li {
 /* Letter signup */
 #letter-text {
   background-color: #007EFF;
-  padding: 20px 40px 20px 30px;
+  padding: 20px 30px;
   color: white;
+  font-size: 16px;
+}
+#letter-text p:first-child {
+  font-size: 18px;
+}
+#letter-text li p:first-child {
   font-size: 16px;
 }
 #letter-signup #letter-wrapper h2 {
@@ -436,6 +442,8 @@ ul.menu li {
   z-index: 400;
   background-color: white;
   margin-top: 20px;
+  position: relative;
+  top: 139px;
 }
 #letter-signup-form h3 {
   font-family: 'antonioregular';
@@ -458,7 +466,6 @@ ul.menu li {
   position: absolute;
   top: -154px;
   left: 2px;
-  display: none;
 }
 
 #recent-signatories h3 {
@@ -578,13 +585,8 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     width: 960px;
   }
   #letter-aside {
-    width: 250px;
     position: relative;
     left: -32px;
-  }
-  #letter-signup-form {
-    position: relative;
-    top: 139px;
   }
   #recent-signatories  {
     position: relative;
@@ -592,10 +594,6 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     left: 2px;
     padding: 10px;
     background-color: white;
-  }
-
-  .letter-recipient-headshot {
-    display: block;
   }
 }
 
@@ -612,6 +610,16 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   #generic-box h2 {
     font-size: 54px;
   }
+  h2 {
+    font-size: 50px;
+  }
+  #letter-signup #letter-wrapper h2 {
+    line-height: 21px;
+  }
+  #letter-aside {
+    position: relative;
+    left: -32px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -620,8 +628,11 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 /* Small devices (768px and smaller) */
 @media (max-width: 768px) {
   #letter-signup #letter-wrapper h2 {
-    font-size: 53px;
+    font-size: 51px;
     line-height: 22px;
+    color: white;
+    background-color: #007eff;
+    padding-top: 38px;
   }
   #generic-box {
     width: 80%;
@@ -637,6 +648,31 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     font-size: 12px;
     padding-left: 0px;
     padding-right: 16px;
+  }
+  #letter-signup-form {
+    position: static;
+  }
+  #letter-signup,
+  #letter-signup .container {
+    padding: 0;
+  }
+  #letter-wrapper {
+    padding: 0;
+  }
+  #letter-signup-form {
+    border: none;
+  }
+  #reps-lookup-box {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  h2,
+  #letter-signup-form h3 {
+    font-size: 50px;
+    font-family: 'antoniobold';
+  }
+  #header-title {
+    font-weight: bold;
   }
 }
 
