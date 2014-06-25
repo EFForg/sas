@@ -246,6 +246,10 @@ ul.menu li {
   padding-bottom: 10px;
 }
 
+#lookup-privacy a {
+  color: #ff0000;
+}
+
 #lookup-submit {
   letter-spacing: 3px;
 }
