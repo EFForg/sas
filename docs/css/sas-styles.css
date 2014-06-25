@@ -320,7 +320,7 @@ ul.menu li {
 #no-zipcode-btn {
   width: 100%;
   text-align: center;
-  margin: 0 auto;
+  margin: 5px auto 10px;
   display: block;
   font-size: 14px;
 }
@@ -480,8 +480,8 @@ ul.menu li {
 }
 .letter-recipient-headshot {
   position: absolute;
-  top: -154px;
-  left: 2px;
+  top: -182px;
+  left: 1px;
 }
 
 #recent-signatories h3 {
@@ -628,7 +628,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     font-size: 50px;
   }
   #letter-signup #letter-wrapper h2 {
-    line-height: 21px;
+    line-height: 17px;
     font-size: 45px;
   }
   #letter-aside {
