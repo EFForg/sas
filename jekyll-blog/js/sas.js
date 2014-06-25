@@ -760,7 +760,6 @@
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
       var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
-      var message = '';
       html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
     }
     return html;
