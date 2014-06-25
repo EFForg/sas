@@ -699,6 +699,22 @@
     }
     return grade;
   }
+  function sasGetTweet(repCode) {
+    score = reps[repCode][8];
+    var handle = reps[repCode][15];
+    var message = '';
+    if (score >= 3) {
+      message = 'Nice score, @' + handle + '. Thank you for standing against NSA spying. Please ask your colleagues to join you.';
+    }
+    else if (score <= 2.5){
+      message = 'Dear @' + handle + ': Your record on NSA reform is bad, but there’s still time. Stand against mass spying today.';
+    }
+    else {
+      message = 'There are no civilians in the fight against mass spying, @' + handle + '. Take a stand against NSA spying.';
+    }
+    message += ' https://eff.org/score';
+    return message;
+  }
   
   // Returns "a" or "an" depending on phonetics.
   function sasGetGradeArticle(grade) {
@@ -737,7 +753,8 @@
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
       var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica';
-      html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=@' + handle + ' got ' + article + ' ' + grade + ' on their surveillance score card.&related=' + recommendations + '">Tweet @' + handle + '</a>';
+      var message = '';
+      html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
     }
     return html;
   }
