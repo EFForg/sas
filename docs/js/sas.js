@@ -581,6 +581,9 @@
     'tf': ['TechFreedom', 'http://techfreedom.org/privacypolicy', 'techfreedom'],
   }
   
+  // Partner codes for twitter
+  var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
+  
   // Sunlight API
   var sunlightKey = '3d4faf1bbaf64fa4906c6d9f9ce8c2cc';
   var sunlightURL = 'https://congress.api.sunlightfoundation.com/';
@@ -705,7 +708,7 @@
     return grade;
   }
   
-  function sasGetTweet(repCode) {
+  function sasGetTweetMessage(repCode) {
     score = reps[repCode][8];
     var handle = reps[repCode][15];
     var message = '';
@@ -723,16 +726,6 @@
     return message;
   }
   
-  // Returns "a" or "an" depending on phonetics.
-  function sasGetGradeArticle(grade) {
-    if ((grade == 'A') || (grade == 'F')) {
-      return 'an';
-    }
-    else {
-      return 'a';
-    }
-  }
-
   function sasRenderRep(repCode, sunlightResults) {
     var html = '<div class="rep-individual col-md-4 col-lg-4">';
     html += '<div class="row">';
@@ -741,36 +734,45 @@
     html += '</div>';
     html += '<div class="row">';
     html += '<h3>' + sasGetFullName(repCode) + '</h3>';
-    html += sasTwitterRenderRep(repCode);
+    html += '<span class="tweet-scorecard">Tweet @' + getTwitterHandle(repCode) + '</span>';
     html += '</div>';
     html += '</div>';
     
+    // Wrap the whole think in a twitter link
+    html = renderTweet(html, sasGetTweetMessage(repCode), 'rep-tweet');
     return html;
   }
   
-  function sasTwitterRenderRep(repCode) {
-    // Get the twitter handle. If there's none, check repTwitterBackup to see
-    // if a dinky one exists.
+  function getTwitterHandle(repCode) {
     var handle = reps[repCode][15];
     if (handle == '') {
       handle = repTwitterBackup[repCode];
     }
+    return handle;
+  }
+  
+  // :( - Used for Full Scorecard.
+  function sasTwitterRenderRep(repCode) {
+    var handle = getTwitterHandle(repCode);
     var html = '';
     if (handle != '') {
-      var grade = sasGetScore(repCode);
-      var article = sasGetGradeArticle(grade);
-      var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
-      html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
+      var message = sasGetTweetMessage(repCode)
+      html = renderTweet('Tweet @' + handle, message, 'tweet-scorecard');
     }
     return html;
   }
   
-  function sasTwitterRenderSite() {
-    // @todo Sitewide tweet here?
-    //var status = 
-    var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
-    html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
-    return html;
+  function renderTweet(anchorText, tweetText, anchorClass) {
+    var tweet = '<a data-network="twitter" target="_blank" ';
+    if (anchorClass != null) {
+      tweet += 'class="' + anchorClass + '" ';
+    }
+    tweet += 'href="https://twitter.com/intent/tweet?status=' + tweetText;
+    tweet += '&related=' + recommendations;
+    tweet += '">';
+    tweet += anchorText + '</a>';
+    
+    return tweet;
   }
   
   function sasDisplayAllReps() {
@@ -833,7 +835,7 @@
   }
   
   function addTwitterWindowEvent() {
-    $(".tweet-scorecard, .tweet-thanks").click(function() {
+    $(".rep-tweet, .tweet-scorecard, .tweet-thanks").click(function() {
       var url = $(this).attr("href");
       window.open(url,"Twitter","width=550,height=420");
       return false;
@@ -844,7 +846,6 @@
     var escapedValue = $('<div/>').text(text).html();
     return escapedValue;
   }
-
 
   function removeURLParameter(url, parameter) {
     //prefer to use l.search if you have a location/link object
@@ -861,7 +862,6 @@
                 pars.splice(i, 1);
             }
         }
-
         url= urlparts[0]+'?'+pars.join('&');
         return url;
     }
