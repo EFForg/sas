@@ -401,28 +401,6 @@ ul.menu li {
   margin-bottom: 60px;
 }
 
-/**
- * Fixes Firefox letter signup grid bug
- * @todo: Can this be targeted more effectively? Doesn't seem to introduce
- * other bugs.
-*/
-.clearfix:after,
-.container:after,
-.container-fluid:after,
-.row:after,
-.form-horizontal .form-group:after,
-.btn-toolbar:after,
-.btn-group-vertical > .btn-group:after,
-.nav:after,
-.navbar:after,
-.navbar-header:after,
-.navbar-collapse:after,
-.pager:after,
-.panel-body:after,
-.modal-footer:after {
-  clear: none;
-}
-
 #letter-signup-outside-us {
   color: #ff0000;
   font-size: 12px;
