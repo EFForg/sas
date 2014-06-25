@@ -55,10 +55,7 @@ $(document).ready(function() {
               }
               $('[data-network="' + network + '"]').attr('count', count);
           })
-      },
-      dataType: 'jsonp',
-      cache         : true,
-      jsonpCallback : 'myCallback'
+      }
   });
   addTwitterWindowEvent();
 
