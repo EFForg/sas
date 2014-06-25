@@ -760,9 +760,24 @@
       var grade = sasGetScore(repCode);
       var article = sasGetGradeArticle(grade);
       var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
-      html = '<a data-network="twitter" target="_blank" class="tweet-scorecard" href="https://twitter.com/intent/tweet?status=' + sasGetTweet(repCode) + '&related=' + recommendations + '">Tweet @' + handle + '</a>';
+      html = renderTweet('Tweet @' + handle, sasGetTweet(repCode), recommendations, 'tweet-scorecard');
     }
     return html;
+  }
+  
+  function renderTweet(anchorText, tweetText, related, anchorClass) {
+    var tweet = '<a data-network="twitter" target="_blank" ';
+    if (anchorClass != null) {
+      tweet += 'class="' + anchorClass + '" ';
+    }
+    tweet += 'href="https://twitter.com/intent/tweet?status=' + tweetText;
+    if (related != null) {
+      tweet += '&related=' + related;
+    }
+    tweet += '">';
+    tweet += anchorText + '</a>';
+    alert(tweet);
+    return tweet;
   }
   
   function sasTwitterRenderSite() {
