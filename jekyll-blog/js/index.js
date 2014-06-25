@@ -17,7 +17,8 @@ $(document).ready(function() {
     repLookup();
   });
   
-  $("#lookup-street, #lookup-zip").keyup(function (e) {
+  // Pressing enter inside the form = lookup
+  $("#lookup-street, #lookup-zip, #lookup-submit-anchor").keyup(function (e) {
     if (e.keyCode == 13) {
       repLookup();
     }
