@@ -710,14 +710,14 @@
     var handle = reps[repCode][15];
     var message = '';
     if (score >= 3) {
-      message = 'Nice score, @' + handle + '. Thank you for standing against NSA spying. Please ask your colleagues to join you.';
+      message = 'Hi, @' + handle + '. Thank you for standing against NSA spying. Please ask your colleagues to join you.';
     }
     else if (score <= 2.5){
-      message = 'Dear @' + handle + ': Your record on NSA reform is bad, but there’s still time. Stand against mass spying today.';
+      message = 'Dear @' + handle + ': Your record on NSA reform is poor, but there’s still time. Stand against mass spying today.';
     }
     // Check for Senators w/ score of 0. @todo Architect better later
     if ((score == 0) && reps[repCode][9] == "Sen") {
-      message = 'There are no civilians in the fight against mass spying, @' + handle + '. Take a stand against NSA spying.';
+      message = 'Dear @' + handle + ': please take a stand against NSA spying. We need you to champion real reform.';
     }
     message += ' https://eff.org/score';
     return message;
