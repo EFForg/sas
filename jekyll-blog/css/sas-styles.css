@@ -615,6 +615,13 @@ ul.menu li {
   padding: 5px 20px 5px 10px;
 }
 
+#scorecard td.name {
+  font-size: 1.2em;
+}
+#scorecard td.name div {
+  font-size: 0.8em;
+}
+
 #scorecard tr.odd {
   background-color: #eee;
 }
@@ -625,6 +632,18 @@ ul.menu li {
 
 #scorecard .details {
   display: none;
+}
+#scorecard .details div {
+  padding: 0 0.5em 0 0.5em;
+}
+#scorecard .score {
+  float: right;
+}
+#scorecard .details .odd {
+  background-color: #ddd;
+}
+#scorecard .details .total {
+  font-weight: 600;
 }
 
 table.tablesorter thead tr .header {
