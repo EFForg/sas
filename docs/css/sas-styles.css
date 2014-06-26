@@ -644,6 +644,7 @@ ul.menu li {
 }
 #scorecard .details .total {
   font-weight: 600;
+  margin-bottom: 0.65em;
 }
 
 table.tablesorter thead tr .header {
