@@ -811,3 +811,11 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     margin: 20px auto 50px;
   }
 }
+
+tr.odd {
+  background-color: #ccc;
+}
+td.grade {
+  font-size: 200%;
+  font-weight: 600;
+}
