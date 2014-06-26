@@ -512,16 +512,29 @@ ul.menu li {
   min-height: 500px;
 }
 
+#generic-subheader {
+  padding-top: 10px;
+  background: #000000;
+}
+
+#generic-subheader h2 {
+  color: #007EFF;
+}
+
 #generic-box {
   width: 750px;
   background-color: white;
   color: black;
-  padding: 1px 20px;
+  padding: 20px 20px;
   margin: 0 auto;
   position: relative;
   z-index: 100;
   font-size: 18px;
   min-height: 500px;
+}
+
+#generic-box p {
+  padding-bottom: 20px;
 }
 
 #informational-box {
