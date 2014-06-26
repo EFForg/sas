@@ -171,13 +171,43 @@ ul.menu li {
   height: 64px;
   width: 100%;
   background-color: #eee;
+  text-align: center;
 }
 
 #footer1-box {
-  padding-top: 24px;
-  width: 70%;
+  padding-top: 0px;
+  width: 100%;
   margin: auto;
-  text-align: center;
+}
+
+.footer1-item {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 24px;
+  margin: auto;
+}
+
+#cc-logo {
+  padding-top: 18px;
+  padding-right: 0px;
+}
+
+#cc-text {
+  padding-left: 0px;
+  padding-top: 16px;
+  width: 200px;
+}
+
+#cc-logo img {
+  padding-right: 10px;
+  display: inline;
+}
+
+.footer1-item p {
+  font-size: 11px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #show-thanks {
