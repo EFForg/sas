@@ -175,19 +175,16 @@ ul.menu li {
 }
 
 #footer1-box {
-  padding-top: 0px;
+  padding-top: 15px;
   width: 100%;
   margin: auto;
+  font-size: 11px;
 }
-
-.footer1-item {
-  display: inline;
+#footer1-box a,
+#footer1-box span {
   padding-left: 10px;
-  padding-right: 20px;
-  padding-top: 24px;
-  margin: auto;
+  padding-right: 10px;
 }
-
 #cc-logo {
   padding-top: 18px;
   padding-right: 0px;
@@ -202,12 +199,6 @@ ul.menu li {
 #cc-logo img {
   padding-right: 10px;
   display: inline;
-}
-
-.footer1-item p {
-  font-size: 11px;
-  padding: 0px;
-  margin: 0px;
 }
 
 #show-thanks {
