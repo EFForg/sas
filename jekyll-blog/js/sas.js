@@ -805,7 +805,7 @@
       details += '<div class="odd total">Total score: <span class="score">' + reps[i][8] + '</span></div> </div>';
 
       html += '<tr>';
-      html +=   '<td valign="top" style="padding-top: 0.7em" class="name">' + sasGetFullName(i) + details + '</td>';
+      html +=   '<td valign="top" style="padding-top: 0.65em" class="name">' + sasGetFullName(i) + details + '</td>';
       html +=   '<td valign="top" style="padding-top: 1.2em">' + reps[i][12] + '</td>';
       html +=   '<td valign="top" style="padding-top: 1.2em">' + reps[i][13] + '</td>';
       html +=   '<td valign="top" class="grade">' + sasGetScore(i) + '</td>';
