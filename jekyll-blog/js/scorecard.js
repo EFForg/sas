@@ -17,7 +17,7 @@ $(document).ready(function() {
   $('#scorecard-table').tablesorter({
     widgets: ['zebra'],
     textExtraction: scorecardTextExtraction,
-    sortList: [[3,0]],
+    sortList: [[2,0]],
     headers: {
       4: {
          sorter: false,
