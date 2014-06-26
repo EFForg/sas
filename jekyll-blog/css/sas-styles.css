@@ -916,6 +916,10 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   display: none;
   background-color: #007EFF;
   color: #000;
+  max-width: 256px;
+  margin: 1em auto 0px;
+  text-align: left;
+  padding: 0.5em;
 }
 
 .rep-individual .details .total {
