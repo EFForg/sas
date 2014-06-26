@@ -533,6 +533,9 @@ ul.menu li {
   font-size: 18px;
   /* min-height: 500px; */
 }
+#blog #generic-box {
+  min-height: 500px;
+}
 #generic-box-img {
    width: 750px;
    margin: auto;
