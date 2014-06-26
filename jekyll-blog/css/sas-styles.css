@@ -531,7 +531,7 @@ ul.menu li {
   margin-bottom: 30px;
 }
 #scorecard-box {
-  width: 70%;
+  width: 750px;
   background-color: white;
   color: black;
   padding: 1px 20px;
@@ -873,7 +873,8 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     margin: 20px auto 50px;
   }
   #generic-box,
-  #generic-box-img {
+  #generic-box-img,
+  #scorecard-box {
     width: auto;
   }
 }
