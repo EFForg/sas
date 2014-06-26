@@ -881,5 +881,8 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   #scorecard-box {
     padding: 20px;
   }
+  .navbar-nav>li>a {
+    text-transform: uppercase;
+  }
 }
 
