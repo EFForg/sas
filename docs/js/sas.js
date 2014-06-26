@@ -736,6 +736,7 @@
     html += '<div class="row">';
     html += '<h3>' + sasGetFullName(repCode) + '</h3>';
     html += '<span class="tweet-scorecard">Tweet @' + getTwitterHandle(repCode) + '</span>';
+    html += sasDisplayRepDetails(reps[repCode]);
     html += '</div>';
     html += '</div>';
     
@@ -869,6 +870,10 @@
       var url = $(this).attr("href");
       window.open(url,"Twitter","width=550,height=420");
       return false;
+    });
+    // Show score details.
+    $('.rep-tweet').hover(function() {
+      $('.details', this).slideToggle();
     });
   }
 

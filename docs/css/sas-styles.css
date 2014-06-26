@@ -28,6 +28,7 @@
         url('../fonts/antonio/antonio-regular-webfont.ttf') format('truetype'),
         url('../fonts/antonio/antonio-regular-webfont.svg#antonioregular') format('svg');
   font-weight: normal;
+  color: #007EFF;
   font-style: normal;
 }
 
@@ -911,3 +912,16 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
 }
 
+.rep-individual .details {
+  display: none;
+  background-color: #007EFF;
+  color: #000;
+}
+
+.rep-individual .details .total {
+  color: #fff;
+}
+
+.rep-individual .details .score {
+  float: right;
+}
