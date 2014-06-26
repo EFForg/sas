@@ -5,6 +5,9 @@ var scorecardTextExtraction = function(node) {
   if (node.innerHTML == '?') {
     return 'G';
   }
+  if (node.innerHTML == '') {
+    return 'H';
+  }
   return node.innerHTML;
 }
 

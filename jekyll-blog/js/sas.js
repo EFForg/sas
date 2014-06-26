@@ -706,6 +706,9 @@
     if ((score == 0) && reps[repCode][9] == "Sen") {
       grade = '?';
     }
+    else if ((score == 0) && reps[repCode][9] != "Rep") {
+      grade = '';
+    }
     return grade;
   }
   
