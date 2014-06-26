@@ -87,5 +87,8 @@ $(document).ready(function() {
   })
 
   addTwitterWindowEvent();
+  setInterval(function() {
+    effRecentSigners();
+  }, 10000);
 
 });
