@@ -500,6 +500,18 @@ ul.menu li {
   background: #000000;
 }
 
+#scorecard-box {
+  width: 70%;
+  background-color: white;
+  color: black;
+  padding: 1px 20px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  font-size: 18px;
+  min-height: 500px;
+}
+
 #generic-box {
   width: 70%;
   background-color: white;
