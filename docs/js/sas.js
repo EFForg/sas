@@ -571,7 +571,7 @@
   }
 
   var partnerFilter = {
-    'gp': ['Green Peace', 'http://www.greenpeace.org/usa/en/about/Privacy-Policy/', 'greenpeaceusa'],
+    'gp': ['Greenpeace', 'http://www.greenpeace.org/usa/en/about/Privacy-Policy/', 'greenpeaceusa'],
     'sf': ['Fight for the Future', 'http://sunlightfoundation.com/legal/privacy/', 'sunfoundation'],
     'fp': ['Free Press Action Fund', 'http://www.freepress.net/privacy-copyright', 'freepress'],
     'fftf': ['Sunlight Foundation', 'http://www.fightforthefuture.org/privacy/', 'fightfortheftr'],
@@ -820,8 +820,8 @@
   }
 
   function effSignupParter() {
-    // Default to Green Peace
-    var partner = 'Green Peace';
+    // Default to Greenpeace
+    var partner = 'Greenpeace';
     var pCode = getParameterByName('r');
     if (pCode == '') {
       pCode = 'gp';
