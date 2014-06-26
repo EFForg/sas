@@ -924,6 +924,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 
 .rep-individual .details .total {
   color: #fff;
+  font-weight: 800;
 }
 
 .rep-individual .details .score {
