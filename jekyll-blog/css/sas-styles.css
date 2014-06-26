@@ -547,11 +547,17 @@ ul.menu li {
   z-index: 100;
   font-size: 18px;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 #informational-box a {
   text-decoration: underline;
+}
+
+#partners-box {
+  max-width: 750px;
+  margin: auto;
+  padding-bottom: 20px;
 }
 
 #generic-box table,
