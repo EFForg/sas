@@ -219,20 +219,23 @@ ul.menu li {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  min-height: 500px;
+  min-height: 558px;
   padding-top:20px;
 }
 
 #reps-list-mine {
   display: none;
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
-
+#reps-lookup h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
 #reps-lookup-box {
   background-color: white;
   color: black;
-  padding: 1px 20px;
+  padding: 15px 20px 1px;
   width: 410px;
   margin: 0 auto;
   position: relative;
@@ -241,7 +244,7 @@ ul.menu li {
   box-shadow: 1px 1px 25px 5px #050505;
   font-size: 18px;
   opacity: 0.9;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 #reps-lookup-box h2 {
   font-size: 27px;
@@ -353,7 +356,7 @@ ul.menu li {
   font-size: 85px;
   text-align: center;
   display: inline-block;
-  padding: 4px 0 0;
+  padding: 2px 0 0;
   width: 100px;
   vertical-align: top;
   font-family: 'antoniobold';
