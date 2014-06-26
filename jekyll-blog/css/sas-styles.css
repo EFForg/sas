@@ -571,6 +571,14 @@ ul.menu li {
   padding-right: 20px;
 }
 
+#scorecard tr.odd {
+  background-color: #eee;
+}
+#scorecard td.grade {
+  font-size: 200%;
+  font-weight: 600;
+}
+
 table.tablesorter thead tr .header {
 	background-image: url(../images/bg.gif);
 	background-repeat: no-repeat;
@@ -824,3 +832,4 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     margin: 20px auto 50px;
   }
 }
+

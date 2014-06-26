@@ -12,6 +12,7 @@ $(document).ready(function() {
   // Add tablesorter and properties.
   $('#scorecard-body').html(sasDisplayAllReps());
   $('#scorecard-table').tablesorter({
+    widgets: ['zebra'],
     textExtraction: scorecardTextExtraction,
     sortList: [[1,0]],
     headers: {

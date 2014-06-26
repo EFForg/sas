@@ -757,7 +757,7 @@
     var html = '';
     if (handle != '') {
       var message = sasGetTweetMessage(repCode)
-      html = renderTweet('Tweet @' + handle, message, 'tweet-scorecard');
+      html = renderTweet('Tweet This', message, 'tweet-scorecard');
     }
     return html;
   }
@@ -767,8 +767,8 @@
     if (anchorClass != null) {
       tweet += 'class="' + anchorClass + '" ';
     }
-    tweet += 'href="https://twitter.com/intent/tweet?status=' + tweetText;
-    tweet += '&related=' + recommendations;
+    tweet += 'href="https://twitter.com/intent/tweet?status=' + encodeURIComponent(tweetText);
+    tweet += '&amp;related=' + recommendations;
     tweet += '">';
     tweet += anchorText + '</a>';
     
@@ -780,9 +780,9 @@
     for (var i in reps) {
       html += '<tr>';
       html +=   '<td>' + sasGetFullName(i) + '</td>';
-      html +=   '<td>' + sasGetScore(i) + '</td>';
       html +=   '<td>' + reps[i][12] + '</td>';
       html +=   '<td>' + reps[i][13] + '</td>';
+      html +=   '<td class="grade">' + sasGetScore(i) + '</td>';
       html +=   '<td>' + sasTwitterRenderRep(i) + '</td>';
       html += '</tr>';
     }
