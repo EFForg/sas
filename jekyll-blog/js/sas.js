@@ -869,7 +869,7 @@
   }
   
   function addTwitterWindowEvent() {
-    $(".rep-tweet, .tweet-scorecard, .tweet-thanks").click(function() {
+    $(".rep-tweet, .tweet-thanks").click(function() {
       var url = $(this).attr("href");
       window.open(url,"Twitter","width=550,height=420");
       return false;
