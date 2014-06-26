@@ -187,7 +187,6 @@
     if ((score == 0) && reps[repCode][9] == "Sen") {
       message = 'Dear @' + handle + ': please take a stand against NSA spying. We need you to champion real reform.';
     }
-    message += ' https://eff.org/score';
     return message;
   }
   
@@ -233,7 +232,8 @@
     if (anchorClass != null) {
       tweet += 'class="' + anchorClass + '" ';
     }
-    tweet += 'href="https://twitter.com/intent/tweet?status=' + encodeURIComponent(tweetText);
+    tweet += 'href="https://twitter.com/share?text=' + encodeURIComponent(tweetText);
+    tweet += '&amp;url=' + encodeURIComponent('https://standagainstspying.org');
     tweet += '&amp;related=' + encodeURIComponent(recommendations);
     tweet += '">';
     tweet += anchorText + '</a>';
