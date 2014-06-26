@@ -522,8 +522,7 @@ ul.menu li {
   padding: 0;
 }
 
-#generic-box,
-#generic-box-img {
+#generic-box {
   width: 750px;
   background-color: white;
   color: black;
@@ -533,6 +532,10 @@ ul.menu li {
   z-index: 100;
   font-size: 18px;
   /* min-height: 500px; */
+}
+#generic-box-img {
+   width: 750px;
+   margin: auto;
 }
 #generic-box-img img {
   width: 100%;
@@ -582,8 +585,7 @@ ul.menu li {
 #scorecard td {
   color: #000;
   font-size: 16px;
-  padding-left: 10px;
-  padding-right: 20px;
+  padding: 5px 20px 5px 10px;
 }
 
 #scorecard tr.odd {
@@ -845,6 +847,10 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     position: static;
     width: 133px;
     margin: 20px auto 50px;
+  }
+  #generic-box,
+  #generic-box-img {
+    width: auto;
   }
 }
 
