@@ -758,7 +758,7 @@
     var html = '';
     if (handle != '') {
       var message = sasGetTweetMessage(repCode)
-      html = renderTweet('Tweet This', message, 'tweet-scorecard');
+      html = renderTweet('Tweet this', message, 'tweet-scorecard');
     }
     return html;
   }
@@ -802,7 +802,7 @@
         details += '<div class="odd">USA Freedom Act (House passed) <span class="score">' + reps[i][6] + '</span></div>';
         details += '<div>FISA Transparency &amp; Modernization Act <span class="score">' + reps[i][1] + '</span></div>';
       }
-      details += '<div class="odd total">TOTAL: <span class="score">' + reps[i][8] + '</span></div> </div>';
+      details += '<div class="odd total">Total score <span class="score">' + reps[i][8] + '</span></div> </div>';
 
       html += '<tr>';
       html +=   '<td valign="top" style="padding-top: 0.7em" class="name">' + sasGetFullName(i) + details + '</td>';
