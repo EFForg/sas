@@ -1,5 +1,16 @@
   // Main Data source.
   // Replace pattern ^([^,]*),(.*)$ \1:[\2  
+
+  // 0: sponsor/cosponsor of FISA Improvements Act (-4)
+  // 1: sponsor/cosponsor of FISA Transparency & Modernization Act (-4)
+  // 2: sponsor/cosponsor of Senate version of USA FREEDOM (+4)
+  // 3: sponsor/cosponsor of Surveillance State Repeal Act (+4)
+  // 4: sponsor/cosponsor of USA FREEDOM prior to 2014-05-18 (+4)
+  // 5: voted for Conyers/Amash amendment (+4)
+  // 6: voted for House version of USA Freedom (-3)
+  // 7: voted for Massie-Lofgren amendment (+3)
+  // 8: total
+
   var reps = {
     "A000055":[0,0,0,0,0,0,-3,0,-3,"Rep","Robert","Aderholt","R","AL",4,"Robert_Aderholt","RobertAderholt","19787529402"  ],
     "A000360":[0,0,0,0,0,0,0,0,0,"Sen","Lamar","Alexander","R","TN",null,"SenAlexander","lamaralexander","89927603836"  ],
@@ -768,7 +779,7 @@
       tweet += 'class="' + anchorClass + '" ';
     }
     tweet += 'href="https://twitter.com/intent/tweet?status=' + encodeURIComponent(tweetText);
-    tweet += '&amp;related=' + recommendations;
+    tweet += '&amp;related=' + encodeURIComponent(recommendations);
     tweet += '">';
     tweet += anchorText + '</a>';
     
@@ -778,12 +789,27 @@
   function sasDisplayAllReps() {
     var html = '';
     for (var i in reps) {
+      var details = '<div style="font-size: smaller; " class="details">';
+      if (reps[i][9] == 'Sen') {
+        details += '<div>USA FREEDOM Act <span class="score">' + '</span></div>';
+        details += '<div>FISA Improvements Act <span class="score">' + '</span></div>';
+      }
+      else {
+        details += '<div>Surveillance State Repeal Act <span class="score">' + '</span></div>';
+        details += '<div>USA FREEDOM Act (original) <span class="score">' + '</span></div>';
+        details += '<div>Conyers-Amash Amend. <span class="score">' + '</span></div>';
+        details += '<div>Massie-Lofgren Amend. <span class="score">' + '</span></div>';
+        details += '<div>USA Freedom Act (House passed) <span class="score">' + '</span></div>';
+        details += '<div>FISA Transparency &amp; Modernization Act <span class="score">' + '</span></div>';
+      }
+      details += '<div>TOTAL: <span class="score">' + '</span></div> </div>';
+
       html += '<tr>';
-      html +=   '<td>' + sasGetFullName(i) + '</td>';
-      html +=   '<td>' + reps[i][12] + '</td>';
-      html +=   '<td>' + reps[i][13] + '</td>';
-      html +=   '<td class="grade">' + sasGetScore(i) + '</td>';
-      html +=   '<td>' + sasTwitterRenderRep(i) + '</td>';
+      html +=   '<td valign="top" style="padding-top: 1.2em" class="name">' + sasGetFullName(i) + details + '</td>';
+      html +=   '<td valign="top" style="padding-top: 1.2em">' + reps[i][12] + '</td>';
+      html +=   '<td valign="top" style="padding-top: 1.2em">' + reps[i][13] + '</td>';
+      html +=   '<td valign="top" class="grade">' + sasGetScore(i) + '</td>';
+      html +=   '<td valign="top" style="padding-top: 1.2em">' + sasTwitterRenderRep(i) + '</td>';
       html += '</tr>';
     }
     return html;

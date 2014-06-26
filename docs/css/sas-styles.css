@@ -623,6 +623,10 @@ ul.menu li {
   font-weight: 600;
 }
 
+#scorecard .details {
+  display: none;
+}
+
 table.tablesorter thead tr .header {
 	background-image: url(../images/bg.gif);
 	background-repeat: no-repeat;

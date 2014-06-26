@@ -22,4 +22,6 @@ $(document).ready(function() {
     }
   });
   addTwitterWindowEvent();
+  $('#scorecard td.name').css('cursor', 'pointer').click(function() { $('.details', this).slideToggle(); });
+  $('#scorecard td.grade').css('cursor', 'pointer').click(function() { $('.details', $(this).parent()).slideToggle(); });
 });
