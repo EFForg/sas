@@ -67,7 +67,7 @@
 body {
   font-family: 'open_sansregular', 'Helvetica', Arial, sans-serif;
 }
-a, a:link {
+a, a:link, a:hover {
   color: #007EFF;
 }
 h2 {
@@ -358,11 +358,13 @@ ul.menu li {
   display: inline-block;
   padding: 2px 0 0;
   width: 100px;
+  height: 127px;
   vertical-align: top;
   font-family: 'antoniobold';
   border-top: black solid 1px;
   border-right: black solid 1px;
   border-bottom: black solid 1px;
+  color: #ffffff;
 }
 .rep-individual h3 {
   font-size: 19px;
@@ -380,10 +382,6 @@ ul.menu li {
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 15px;
-}
-
-.rep-individual .grade {
-  color: #ffffff;
 }
 
 .rep-individual:hover .tweet-scorecard {
