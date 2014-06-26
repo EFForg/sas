@@ -627,7 +627,7 @@ ul.menu li {
 }
 #scorecard td.grade {
   font-size: 200%;
-  font-weight: 800;
+  font-family: open_sansextrabold,Helvetica,Arial,sans-serif;
 }
 
 #scorecard .details {
