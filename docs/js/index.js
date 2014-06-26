@@ -47,6 +47,7 @@ $(document).ready(function() {
   effSignupParter();
   
   $('.privacy-notice-popover').popover();
+  $('.pop-over').popover();
   /* ==========================================================================
      Social counts
      ==========================================================================*/
