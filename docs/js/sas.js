@@ -789,21 +789,7 @@
   function sasDisplayAllReps() {
     var html = '';
     for (var i in reps) {
-      var details = '<div style="font-size: smaller; " class="details">';
-      if (reps[i][9] == 'Sen') {
-        details += '<div class="odd">USA FREEDOM Act: <span class="score">' + reps[i][2] + '</span></div>';
-        details += '<div>FISA Improvements Act: <span class="score">' + reps[i][0] + '</span></div>';
-      }
-      else {
-        details += '<div class="odd">Surveillance State Repeal Act: <span class="score">' + reps[i][3] + '</span></div>';
-        details += '<div>USA FREEDOM Act (original): <span class="score">' + reps[i][4] + '</span></div>';
-        details += '<div class="odd">Conyers-Amash Amendment: <span class="score">' + reps[i][5] + '</span></div>';
-        details += '<div>Massie-Lofgren Amendment: <span class="score">' + reps[i][7] + '</span></div>';
-        details += '<div class="odd">USA Freedom Act: (House passed) <span class="score">' + reps[i][6] + '</span></div>';
-        details += '<div>FISA Transparency &amp; Modernization Act: <span class="score">' + reps[i][1] + '</span></div>';
-      }
-      details += '<div class="odd total">Total score: <span class="score">' + reps[i][8] + '</span></div> </div>';
-
+      var details = sasDisplayRepDetails(reps[i]);
       html += '<tr>';
       html +=   '<td valign="top" style="padding-top: 0.65em" class="name">' + sasGetFullName(i) + details + '</td>';
       html +=   '<td valign="top" style="padding-top: 1.2em">' + reps[i][12] + '</td>';
@@ -813,6 +799,24 @@
       html += '</tr>';
     }
     return html;
+  }
+
+  function sasDisplayRepDetails(rep) {
+    var details = '<div style="font-size: smaller; " class="details">';
+    if (rep[9] == 'Sen') {
+      details += '<div class="odd">USA FREEDOM Act: <span class="score">' + rep[2] + '</span></div>';
+      details += '<div>FISA Improvements Act: <span class="score">' + rep[0] + '</span></div>';
+    }
+    else {
+      details += '<div class="odd">Surveillance State Repeal Act: <span class="score">' + rep[3] + '</span></div>';
+      details += '<div>USA FREEDOM Act (original): <span class="score">' + rep[4] + '</span></div>';
+      details += '<div class="odd">Conyers-Amash Amendment: <span class="score">' + rep[5] + '</span></div>';
+      details += '<div>Massie-Lofgren Amendment: <span class="score">' + rep[7] + '</span></div>';
+      details += '<div class="odd">USA Freedom Act: (House passed) <span class="score">' + rep[6] + '</span></div>';
+      details += '<div>FISA Transparency &amp; Modernization Act: <span class="score">' + rep[1] + '</span></div>';
+    }
+    details += '<div class="odd total">Total score: <span class="score">' + rep[8] + '</span></div> </div>';
+    return details;
   }
   
   function sasSpinner(div) {
