@@ -528,8 +528,17 @@ ul.menu li {
 #scorecard,
 #thanks {
   background: #000000;
+  padding-top: 1px;
 }
-
+#about h2,
+#blog h2,
+#methodology h2,
+#scorecard h2,
+#thanks h2 {
+  color: #007EFF;
+  margin-top: 34px;
+  margin-bottom: 30px;
+}
 #scorecard-box {
   width: 70%;
   background-color: white;
@@ -540,27 +549,30 @@ ul.menu li {
   z-index: 100;
   font-size: 18px;
   min-height: 500px;
-}
-
-#generic-subheader {
-  padding-top: 10px;
-  background: #000000;
-}
-
-#generic-subheader h2 {
-  color: #007EFF;
+  padding: 0;
 }
 
 #generic-box {
   width: 750px;
   background-color: white;
   color: black;
-  padding: 20px 20px;
+  padding: 20px;
   margin: 0 auto;
   position: relative;
   z-index: 100;
   font-size: 18px;
+  /* min-height: 500px; */
+}
+#blog #generic-box {
   min-height: 500px;
+}
+#generic-box-img {
+   width: 750px;
+   margin: auto;
+}
+#generic-box-img img {
+  width: 100%;
+  height: auto;
 }
 
 #generic-box p {
@@ -598,13 +610,15 @@ ul.menu li {
 #scorecard-table {
   width: 100%;
 }
-
+#scorecard-table thead {
+  background-color: #007EFF;
+  color: #fff;
+}
 #scorecard th,
 #scorecard td {
-  color: #000000;
+  color: #000;
   font-size: 16px;
-  padding-left: 10px;
-  padding-right: 20px;
+  padding: 5px 20px 5px 10px;
 }
 
 #scorecard tr.odd {
@@ -631,7 +645,7 @@ table.tablesorter thead tr .headerSortDown {
 }
 
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-  background-color: #007EFF;
+  background-color: #fff;
 }
 
 #blog {
@@ -649,7 +663,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
   #letter-aside {
     position: relative;
-    left: -32px;
+    left: -31px;
   }
   #recent-signatories  {
     position: relative;
@@ -866,6 +880,10 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     position: static;
     width: 133px;
     margin: 20px auto 50px;
+  }
+  #generic-box,
+  #generic-box-img {
+    width: auto;
   }
 }
 
