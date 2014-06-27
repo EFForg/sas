@@ -284,7 +284,7 @@
       details += '<div>USA FREEDOM Act (original): <span class="score">' + rep[4] + '</span></div>';
       details += '<div class="odd">Conyers-Amash Amendment: <span class="score">' + rep[5] + '</span></div>';
       details += '<div>Massie-Lofgren Amendment: <span class="score">' + rep[7] + '</span></div>';
-      details += '<div class="odd">USA Freedom Act: (House passed) <span class="score">' + rep[6] + '</span></div>';
+      details += '<div class="odd">USA Freedom Act (House passed): <span class="score">' + rep[6] + '</span></div>';
       details += '<div>FISA Transparency &amp; Modernization Act: <span class="score">' + rep[1] + '</span></div>';
     }
     details += '<div class="odd total">Total score (4 or higher is an A): <span class="score">' + rep[8] + '</span></div></div>';
