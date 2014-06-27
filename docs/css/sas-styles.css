@@ -820,10 +820,17 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     display: none;
   }
 }
-/* Small devices (768px and smaller) */
+/* Small devices (450px and smaller) */
 @media (max-width: 450px) {
   #letter-signup #letter-wrapper h2 {
     font-size: 35px;
+  }
+  h2 {
+    font-size: 43px;
+  }
+  #letter-signup #letter-wrapper h2,
+  #letter-signup-form h3 {
+    font-size: 30px;
   }
 }
 
