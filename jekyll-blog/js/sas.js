@@ -119,6 +119,9 @@
       success: function (data, status, xhr) {
         var sigsTotal = data.signatures_total;
         for (var i in data.signatories) {
+          if (data.signatories[i]['first_name'] == '' && data.signatories[i]['last_name'] == '') {
+            data.signatories[i]['last_name'] = 'Anonymous';
+          }
           var fullName = '<div class="recent-sign-name">' + escapeHtml(data.signatories[i]['first_name']) + ' ' + escapeHtml(data.signatories[i]['last_name']) + '</div>';
           var country = '<div class="recent-sign-country">' + escapeHtml(data.signatories[i]['country_code']) + '</div>';
           var time = '<div class="recent-sign-time">' + escapeHtml(data.signatories[i]['time_ago']) + '</div>';
