@@ -246,7 +246,7 @@ ul.menu li {
   color: black;
   padding: 15px 20px 1px;
   width: 410px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   position: relative;
   z-index: 100;
   -webkit-box-shadow: 1px 1px 25px 5px #050505;
@@ -749,7 +749,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
   #letter-signup #letter-wrapper h2 {
     line-height: 14px;
-    font-size: 43px;
+    font-size: 42px;
   }
   #letter-aside {
     position: relative;
@@ -773,7 +773,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     margin: 10px 0;
   }
   #letter-signup #letter-wrapper h2 {
-    font-size: 51px;
+    font-size: 48px;
     line-height: 22px;
     color: white;
     background-color: #007eff;
@@ -818,9 +818,6 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
   #cc-credit {
     display: none;
-  }
-  #reps-lookup-box {
-    margin-bottom: 40px;
   }
 }
 /* Small devices (450px and smaller) */
