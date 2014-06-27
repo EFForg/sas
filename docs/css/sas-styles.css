@@ -998,4 +998,5 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 #about-story ol {
   color: #fff;
   margin-left: 1em;
+  padding: 0.5em 0.5em 0.5em 2em;
 }
