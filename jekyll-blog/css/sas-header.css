@@ -173,17 +173,6 @@ svg .eyelid {
   #reps-lookup-box {
     top: 0;
   }
-  #logo {
-    position: static;
-    width: 50%;
-    height: auto;
-   /* -moz-transform: none 0;
-    -ms-transform: none 0;
-    -webkit-transform: none 0;
-    transform: none 0; */
-    margin-left: auto;
-    margin-right: auto;
-  }
   #header-nav {
     position: static;
   }

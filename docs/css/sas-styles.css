@@ -67,6 +67,7 @@
 
 body {
   font-family: 'open_sansregular', 'Helvetica', Arial, sans-serif;
+  min-width: 320px;
 }
 a, a:link, a:hover {
   color: #007EFF;
@@ -77,6 +78,12 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   color: black;
+  font-weight: bold;
+}
+h3,
+strong {
+  font-family: 'open_sanssemibold', 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
 }
 .blue-text {
   color: #007EFF;
@@ -94,6 +101,7 @@ h2 {
 }
 .navbar a {
   color: #BDDDFF;
+  text-align: right;
 }
 .nav>li>a:hover, .nav>li>a:focus {
   color: #fff;
@@ -244,9 +252,14 @@ ul.menu li {
   -webkit-box-shadow: 1px 1px 25px 5px #050505;
   box-shadow: 1px 1px 25px 5px #050505;
   font-size: 18px;
-  opacity: 0.9;
   margin-top: 40px;
 }
+@media (max-width: 410px) {
+  #reps-lookup-box {
+    width: auto;
+  }
+}
+
 #reps-lookup-box h2 {
   font-size: 27px;
   letter-spacing: 1px;
@@ -482,8 +495,8 @@ ul.menu li {
 }
 .letter-recipient-headshot {
   position: absolute;
-  top: -182px;
-  left: 1px;
+  top: -183px;
+  left: -1px;
 }
 
 #recent-signatories h3 {
@@ -708,8 +721,8 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     font-size: 50px;
   }
   #letter-signup #letter-wrapper h2 {
-    line-height: 17px;
-    font-size: 45px;
+    line-height: 14px;
+    font-size: 43px;
   }
   #letter-aside {
     position: relative;
@@ -722,6 +735,16 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 }
 /* Small devices (768px and smaller) */
 @media (max-width: 768px) {
+  #logo {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #logo img {
+    width: 95%;
+  }
+  #header-title {
+    margin: 10px 0;
+  }
   #letter-signup #letter-wrapper h2 {
     font-size: 51px;
     line-height: 22px;
@@ -766,8 +789,14 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     font-size: 50px;
     font-family: 'antoniobold';
   }
-  #header-title {
-    font-weight: bold;
+  #cc-credit {
+    display: none;
+  }
+}
+/* Small devices (768px and smaller) */
+@media (max-width: 450px) {
+  #letter-signup #letter-wrapper h2 {
+    font-size: 35px;
   }
 }
 
