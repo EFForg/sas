@@ -749,9 +749,6 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 
 /* Tablets/medium size devices (between 768px and 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
-  #generic-box {
-
-  }
   #generic-box h2 {
     font-size: 54px;
   }
@@ -786,9 +783,6 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     color: white;
     background-color: #007eff;
     padding-top: 38px;
-  }
-  #generic-box {
-    width: 80%;
   }
   #generic-box h2 {
     font-size: 32px;
