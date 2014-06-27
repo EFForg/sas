@@ -170,6 +170,10 @@
     else if ((score == 0) && reps[repCode][9] != "Rep") {
       grade = '';
     }
+    // New members of congress
+    if (repCode == 'C001102') {
+      grade = '';
+    }
     return grade;
   }
   
