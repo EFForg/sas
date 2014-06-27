@@ -813,11 +813,14 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
   h2,
   #letter-signup-form h3 {
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'antoniobold';
   }
   #cc-credit {
     display: none;
+  }
+  #reps-lookup-box {
+    margin-bottom: 40px;
   }
 }
 /* Small devices (450px and smaller) */
