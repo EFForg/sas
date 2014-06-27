@@ -34,9 +34,9 @@
 
   var partnerFilter = {
     'gp': ['Greenpeace', 'http://www.greenpeace.org/usa/en/about/Privacy-Policy/', 'greenpeaceusa'],
-    'sf': ['Fight for the Future', 'http://sunlightfoundation.com/legal/privacy/', 'sunfoundation'],
+    'sf': ['Sunlight Foundation', 'http://sunlightfoundation.com/legal/privacy/', 'sunfoundation'],
     'fp': ['Free Press Action Fund', 'http://www.freepress.net/privacy-copyright', 'freepress'],
-    'fftf': ['Sunlight Foundation', 'http://www.fightforthefuture.org/privacy/', 'fightfortheftr'],
+    'fftf': ['Fight for the Future', 'http://www.fightforthefuture.org/privacy/', 'fightfortheftr'],
     'dp': ['Demand Progress', 'http://www.demandprogress.org/privacy/', 'demandprogress'],
     'lp': ['Libertarian Party', 'http://www.lp.org/privacy-policy', 'lpnational'],
     'fw': ['FreedomWorks', 'http://freedomworksforamerica.org/privacy-policy', 'fwforamerica'],
