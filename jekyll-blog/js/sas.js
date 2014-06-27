@@ -187,6 +187,9 @@
     if ((score == 0) && reps[repCode][9] == "Sen") {
       message = 'Dear @' + handle + ': please take a stand against NSA spying. We need you to champion real reform.';
     }
+    else if (score == 0 && reps[repCode][9] != "Rep") {
+      message = 'Dear @' + handle + ': Please stand against NSA spying. Urge your colleagues in Congress to support real reform.';
+    }
     return message;
   }
   
