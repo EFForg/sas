@@ -709,7 +709,14 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   padding-left: 0;
   padding-right: 0;
 }
-
+#recent-signatories  {
+  position: relative;
+  top: 130px;
+  left: 2px;
+  padding: 10px;
+  background-color: white;
+}
+  
 /* Large devices (large desktops, 960px and up) */
 @media (min-width: 960px) {
   #img-banner {
@@ -722,13 +729,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     position: relative;
     left: -31px;
   }
-  #recent-signatories  {
-    position: relative;
-    top: 130px;
-    left: 2px;
-    padding: 10px;
-    background-color: white;
-  }
+
 }
 
 /* Mediums size devices and below (991px and below) */
@@ -820,6 +821,10 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
   #cc-credit {
     display: none;
+  }
+  #recent-signatories {
+    position: static;
+    
   }
 }
 /* Small devices (450px and smaller) */
