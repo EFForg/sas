@@ -557,7 +557,30 @@ ul.menu li {
   min-height: 500px;
   padding: 0;
 }
-
+#thanks {
+  text-align: center;
+}
+#thanks .page-title {
+  margin-bottom: 0;
+  margin-top: 30px;
+  line-height: 40px;
+}
+#thanks h3.subhead {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'antonioregular';
+  font-size: 40px;
+}
+#thanks #generic-box p {
+  margin-bottom: 10px;
+}
+#thanks #generic-box h2 {
+  font-size: 58px;
+}
+#thanks #generic-box h4 {
+  margin-bottom: 20px;
+}
 #generic-box {
   width: 750px;
   background-color: white;
