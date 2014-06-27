@@ -733,7 +733,18 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 
 /* Mediums size devices and below (991px and below) */
 @media (max-width: 991px) {
-
+  #generic-box,
+  #generic-box-img,
+  #scorecard-box,
+  #informational-box {
+    width: auto;
+  }
+  #scorecard-box {
+    padding: 20px;
+  }
+  .navbar-nav>li>a {
+    text-transform: uppercase;
+  }
 }
 
 /* Tablets/medium size devices (between 768px and 991px) */
@@ -757,9 +768,6 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
 }
 
-@media (min-width: 768px) {
-
-}
 /* Small devices (768px and smaller) */
 @media (max-width: 768px) {
   #logo {
@@ -821,7 +829,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   }
 }
 /* Small devices (450px and smaller) */
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   #letter-signup #letter-wrapper h2 {
     font-size: 35px;
   }
@@ -960,18 +968,6 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
     position: static;
     width: 133px;
     margin: 20px auto 50px;
-  }
-  #generic-box,
-  #generic-box-img,
-  #scorecard-box,
-  #informational-box {
-    width: auto;
-  }
-  #scorecard-box {
-    padding: 20px;
-  }
-  .navbar-nav>li>a {
-    text-transform: uppercase;
   }
 }
 
