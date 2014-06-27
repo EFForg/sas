@@ -959,3 +959,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
 .rep-individual .details .score {
   float: right;
 }
+.grade-scale {
+  margin-right: 50px;
+  margin-left: 50px;
+}
