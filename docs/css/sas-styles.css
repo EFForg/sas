@@ -990,3 +990,12 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   margin-right: 50px;
   margin-left: 50px;
 }
+
+#about-story ol a:link, #about-story ol a:visited {
+  color: #fff;
+}
+
+#about-story ol {
+  color: #fff;
+  margin-left: 1em;
+}
