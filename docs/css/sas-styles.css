@@ -574,6 +574,7 @@ ul.menu li {
 #generic-box-img {
    width: 750px;
    margin: auto;
+   padding-bottom: 40px;
 }
 #generic-box-img img {
   width: 100%;
@@ -703,11 +704,21 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   font-size: 58px;
 }
 #thanks #generic-box h4 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 #thanks #generic-box {
   padding-left: 0;
   padding-right: 0;
+}
+#thanks .share-buttons {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  height: 70px;
+  width: 156px;
+}
+#thanks .share-buttons #stwit {
+  margin-right: 10px;
 }
 #recent-signatories  {
   position: relative;
