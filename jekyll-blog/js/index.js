@@ -75,6 +75,8 @@ $(document).ready(function() {
   })
   $( ".twlinkthis" ).click(function() {
       var url = $(this).attr("href");
+      url += '&related=' + encodeURIComponent(recommendations);
+      alert(url);
       window.open(url,"Twitter","width=550,height=420");
       return false;
   })

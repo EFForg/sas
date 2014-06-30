@@ -44,7 +44,22 @@
   }
   
   // Partner codes for twitter
-  var recommendations = 'eff,greenpeaceusa,sunfoundation,freepress,fightfortheftr,demandprogress,lpnational,fwforamerica,techfreedom';
+
+  function randomize(e) {
+      var t = e.length,
+          n, r;
+      if (t === 0) return false;
+      while (--t) {
+          n = Math.floor(Math.random() * (t + 1));
+          r = e[t];
+          e[t] = e[n];
+          e[n] = r
+      }
+  }
+  var e = ["eff","greenpeaceusa","sunfoundation","fightfortheftr","demandprogress","freepress","LPNational","FWforAmerica","techfreedom","Upworthy","theOpenMedia","thoughtworks","bordc","4Yourliberty","tfrce","TenthAmendment","Restore_the4th","FreedomofPress","reddit","AltWeeklies","penamerican","accessnow"];
+  randomize(e);
+
+  var recommendations = e[0] + "," + e[1] + "," + e[2] + "," + e[3];
   
   // Sunlight API
   var sunlightKey = '3d4faf1bbaf64fa4906c6d9f9ce8c2cc';
@@ -239,6 +254,8 @@
   
   function renderTweet(anchorText, tweetText, anchorClass) {
     var tweet = '<a data-network="twitter" target="_blank" ';
+    randomize(e);
+    var recommendations = e[0] + "," + e[1] + "," + e[2] + "," + e[3];
     if (anchorClass != null) {
       tweet += 'class="' + anchorClass + '" ';
     }
