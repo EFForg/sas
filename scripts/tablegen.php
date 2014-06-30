@@ -102,7 +102,7 @@ $list = array (
   array(0,0,0,0,"0","0","0",0,"Rep","Stephen","Fincher","R","TN",8,"RepFincherTN08","CongressmanFincher","128861763849209"  ),
   array(0,0,0,0,"0","0","0",0,"Rep","Charles","Fleischmann","R","TN",3,"RepChuck","repchuck","189998554345168"  ),
   array(0,0,0,0,"0","0","0",0,"Rep","John","Fleming","R","LA",4,"RepFleming","larep04","372154186772"  ),
-  array(0,0,0,0,"0","0","0",0,"Sen","Alan","Franken","D","MN",null,"","SenatorFranken",""  ),
+  array(0,0,4,0,"0","0","4",0,"Sen","Alan","Franken","D","MN",null,"","SenatorFranken",""  ),
   array(0,0,0,0,"0","0","0",0,"Rep","Bill","Foster","D","IL",11,"RepBillFoster","RepBillFoster","102918290599"  ),
   array(0,0,0,0,"0","0","0",0,"Rep","Marcia","Fudge","D","OH",11,"RepMarciaFudge","marcialfudge","279006440801"  ),
   array(0,0,0,0,"0","0","0",0,"Rep","Virginia","Foxx","R","NC",5,"VirginiaFoxx","repvirginiafoxx","RepVirginiaFoxx"  ),
