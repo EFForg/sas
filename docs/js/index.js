@@ -29,7 +29,7 @@ $(document).ready(function() {
     $('#reps-list-mine-scorecards').html('');
     $('#reps-lookup').toggle();
     $('.share-images').hide();
-    
+
   });
 
   $('#letter-signup-outside-us').click(function() {
@@ -69,7 +69,12 @@ $(document).ready(function() {
   /* ==========================================================================
      Sharing buttons
      ==========================================================================*/
-
+  $('body').on('click', '.fblinkthis', function(ev) {
+    var link = $(ev.currentTarget);
+    var url = $(link).attr("href");
+    window.open(url, "Share on Facebook", "width=650,height=500");
+    return false;
+  });
   $( ".fblinkthis" ).click(function() {
       var url = $(this).attr("href");
       window.open(url, "Share on Facebook", "width=650,height=500");
