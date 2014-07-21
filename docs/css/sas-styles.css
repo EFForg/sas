@@ -1012,3 +1012,36 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   margin-left: 1em;
   padding: 0.5em 0.5em 0.5em 2em;
 }
+
+.share-images {
+  background-color: #007eff; 
+  padding: 50px 0 100px 0 ;
+  color: #fff;
+}
+.share-images h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.shareFB {
+  width: 100%;
+  height: 40px;
+  background-color: #3B5998;
+  float: left;
+  text-align: center;
+  color: #fff !important;
+  line-height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+
+}
+.shareFB:visited {
+  color: #fff;
+}
+.shareFB:active {
+  color: #fff;
+}
+.shareFB:hover {
+  text-decoration: underline;
+}

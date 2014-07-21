@@ -116,6 +116,19 @@
         repCode = results[i]['bioguide_id'];
         html += sasRenderRep(repCode, results[i]);
       }
+      
+      var fbShareHTML = '';
+      for (var i in results) {
+        repCode = results[i]['bioguide_id'];
+        fbShareHTML += ' <div class="col-md-4">'
+        	+ '<a class="fancybox" rel="gallery1" href="images/campaign/'+repCode+'.jpg" title="">'
+        	+ '<img src="images/campaign/'+repCode+'.jpg"  style="width: 100%;" alt=""></a>'
+        	+ '<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/photo.php?fbid=729304367130995&display=popup" class="shareFB">Share On Facebook</a></div>';
+      };
+      $('.scorecards').html(fbShareHTML);
+      $('.share-images').slideDown(400);
+
+
       // Write scorecards, hide lookup, show scorecard.
       $('#lookup-controls').toggle();
       $('#reps-lookup-loader').toggle();

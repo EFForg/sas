@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/sas-styles.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/sas-header.css" type="text/css" media="screen" />
-     
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css" />
+    
     <!-- Scripts Here --> 
     <script src="lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -285,6 +286,37 @@
         </div>
       </div>
     </section>
+    <div class="share-images" style="display: none;">
+      <h2>Share these images on Facebook</h2>
+      <div class="container">
+        <div class="row scorecards">
+        <!--
+          <div class="col-md-4">
+          <a class="fancybox" rel="gallery1" href="images/scorecards/A000055.jpg" title="">
+            <img src="images/scorecards/A000055.jpg"  style="width: 100%;" alt="">
+            </a>
+            <div class="shareFB">Share On Facebook</div>
+          </div>
+          <div class="col-md-4">
+
+          <a class="fancybox" rel="gallery1" href="images/scorecards/A000360.jpg" title="">
+
+          <img  src="images/scorecards/A000360.jpg"  style="width: 100%;" alt=""></a>
+            <div class="shareFB">Share On Facebook</div>
+
+          </div>
+          <div class="col-md-4">
+
+          <a class="fancybox" rel="gallery1" href="images/scorecards/A000368.jpg" title="">
+
+          <img  src="images/scorecards/A000368.jpg" style="width: 100%;" alt=""></a>
+            <div class="shareFB">Share On Facebook</div>
+
+          </div>
+         -->
+        </div>
+      </div>
+    </div>
     <section id="informational">
       <div class="container">
         <h2>We're <span class="blue-text">standing</span> against mass <span class="blue-text">spying</span></h2>
@@ -640,5 +672,14 @@
           <span id="cc-credit">(credit: Stand Against Spying coalition)</span>
         </div>
       </section>
+      <script src="fancybox/jquery.fancybox.js"></script>
+      <script>
+      $(document).ready(function() {
+        $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+      });
+      </script>
     </body>
 </html>

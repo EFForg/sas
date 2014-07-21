@@ -28,6 +28,8 @@ $(document).ready(function() {
     $('#reps-list-mine').toggle();
     $('#reps-list-mine-scorecards').html('');
     $('#reps-lookup').toggle();
+    $('.share-images').hide();
+    
   });
 
   $('#letter-signup-outside-us').click(function() {
