@@ -78,6 +78,7 @@
     $('#reps-lookup-loader').toggle();
     sasSpinner('reps-lookup-loader');
     var req = smartyURL + 'street-address?auth-token=' + smartyAuthToken + '&street=' + street + '&zipcode=' + zip;
+    var zip = zip;
 	  $.ajax({
       url: 'https://api.smartystreets.com/street-address',
       dataType: 'JSONP',
@@ -92,13 +93,16 @@
           var long = data[0]['metadata']['longitude'];
           var lat = data[0]['metadata']['latitude'];
           sunlightGetDistricts(long, lat);
-        }
-        else {
+        } else if (zip && zip.trim() != '') {
+           // sometimes including zip can mess things up if, for instance, the
+           // user also included zip/city/state as part of their street address.
+           smartyGetGeo(street);
+        } else {
           $('#lookup-error').html("No district found for that address.");
           $('#lookup-controls').toggle();
           $('#reps-lookup-loader').toggle();
         }
-      },
+      }
     });
   }
   
