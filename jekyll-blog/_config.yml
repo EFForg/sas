@@ -2,7 +2,6 @@
 title: Stand Against Spying
 email: webmaster@eff.org
 description: ""
-baseurl: ".."
 url: "https://standagainstspying.org"
 destination: "../docs"
 
