@@ -2,6 +2,7 @@
 layout: post
 title:  "New Scorecard Rates How Your Representative Stands on NSA Spying"
 date:   2014-06-28 07:40:00
+summary: FreedomWorks has joined with groups across the political spectrum to bring you a scorecard that tracks your representative’s voting and co-sponsorship history on NSA reform bills.
 ---
 
  <h3>Originally published on <a href="http://www.freedomworks.org/content/new-scorecard-see-how-your-representative-stands-nsa-spying">FreedomWorks.org</a></h3>

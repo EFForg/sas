@@ -2,6 +2,7 @@
 layout: post
 title:  "Diverse Groups Fly Airship Over NSA’s Utah Data Center to Protest Illegal Spying"
 date:   2014-06-27 12:30:00
+summary: Bluffdale, UT - The environmental campaigning group Greenpeace, digital rights watchdog Electronic Frontier Foundation (EFF) and the Tenth Amendment Center (TAC) joined forces today to fly an airship over the NSA's data center in Utah to protest the government's illegal mass surveillance program.
 ---
 <h3>Flight Promotes StandAgainstSpying.org, New Site Calling on Congress to Act</h3>
 

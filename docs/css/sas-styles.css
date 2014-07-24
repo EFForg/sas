@@ -529,7 +529,6 @@ ul.menu li {
 
 
 #about,
-#blog,
 #methodology,
 #scorecard,
 #thanks {
@@ -537,7 +536,6 @@ ul.menu li {
   padding-top: 1px;
 }
 #about h2,
-#blog h2,
 #methodology h2,
 #scorecard h2,
 #thanks h2 {
@@ -677,9 +675,7 @@ table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSo
   background-color: #fff;
 }
 
-#blog {
-  background: #000000;
-}
+
 #thanks {
   text-align: center;
 }
