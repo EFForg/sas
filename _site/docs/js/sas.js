@@ -315,9 +315,9 @@
   function sasDisplayRepDetails(rep) {
     var details = '<div style="font-size: smaller; " class="details">';
     if (rep[10] == 'Sen') {
-      details += '<div class="odd">USA FREEDOM Act: <span class="score">' + rep[3] + '</span></div>';
-      details += '<div>USA FREEDOM Act - July 2014: <span class="score">' + rep[2] + '</span></div>';
-      details += '<div class="odd">FISA Improvements Act: <span class="score">' + rep[0] + '</span></div>';
+      details += '<div class="">USA FREEDOM Act: <span class="score">' + rep[3] + '</span></div>';
+      details += '<div class="odd">USA FREEDOM Act - July 2014: <span class="score">' + rep[2] + '</span></div>';
+      details += '<div class="">FISA Improvements Act: <span class="score">' + rep[0] + '</span></div>';
     }
     else {
       details += '<div class="odd">Surveillance State Repeal Act: <span class="score">' + rep[4] + '</span></div>';
