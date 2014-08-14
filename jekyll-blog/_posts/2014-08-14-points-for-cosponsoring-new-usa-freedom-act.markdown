@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Points for Co-Sponsoring New USA FREEDOM Act"
-date:   2014-06-28 07:40:00
+date:   2014-08-14 07:40:00
 summary: The Stand Against Spying methodology has been updated! Recently, Senator Leahy introduced a new version of the USA FREEDOM Act (S. 2685).
 ---
 
